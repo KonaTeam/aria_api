@@ -20,9 +20,9 @@ First you'll need to define your credentials:
 
 In Rails. You could define specific configuration for each environment.
 
-There's also a parameter to define the version of the Aria API you want to use. Default is 5.15
+There's also a parameter to define the version of the Aria API you want to use. Default is 6.4
 
-    AriaApi::Configuration.api_version = "5.16"
+    AriaApi::Configuration.api_version = "6.5"
 
 
 ## Usage

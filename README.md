@@ -24,6 +24,11 @@ There's also a parameter to define the version of the Aria API you want to use. 
 
     AriaApi::Configuration.api_version = "6.5"
 
+## Caching WSDL
+
+In order to avoid downloading all of the SOAP actions from a remote wsdl like https://secure.future.stage.ariasystems.net/api/Advanced/wsdl/6.4/complete-doc_literal_wrapped.wsdl you may optionally define the following option:   
+    
+    AriaApi::Configuration.wsdl_path = File.join("path", "to", "fixtures","aria_api_6_4.wsdl")
 
 ## Usage
 

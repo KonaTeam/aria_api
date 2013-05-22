@@ -1,39 +1,8 @@
 ---
 http_interactions:
 - request:
-    method: post
-    uri: https://secure.future.stage.ariasystems.net/api/ws/api_ws_class_dispatcher.php
-    body:
-      encoding: US-ASCII
-      string: output_format=json&auth_key=8Vn848nuRPa58jht9jBBpWvSUVsn3fnB&client_no=4950701&rest_call=gen_statement&acct_no=1
-    headers: {}
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Tue, 24 Apr 2012 14:43:38 GMT
-      Server:
-      - Apache
-      Content-Length:
-      - '77'
-      Content-Type:
-      - application/json
-      Set-Cookie:
-      - citrix_ns_id=SKpyizRCSKKhE7lPypqksb9tSX8A0; Domain=.future.stage.ariasystems.net;
-        Path=/; HttpOnly
-    body:
-      encoding: US-ASCII
-      string: ! '{"statement_no":null,"error_code":1009,"error_msg":"account does
-        not exist"}
-
-'
-    http_version: 
-  recorded_at: Tue, 24 Apr 2012 14:43:40 GMT
-- request:
     method: get
-    uri: https://secure.future.stage.ariasystems.net/api/Advanced/wsdl/6.4/complete-doc_literal_wrapped.wsdl
+    uri: https://secure.future.stage.ariasystems.net/api/Advanced/wsdl/6.5/complete-doc_literal_wrapped.wsdl
     body:
       encoding: US-ASCII
       string: ''
@@ -48,28 +17,28 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 22 May 2013 04:15:39 GMT
+      - Wed, 22 May 2013 04:00:16 GMT
       Server:
       - Apache
       Last-Modified:
-      - Wed, 01 May 2013 18:48:27 GMT
+      - Wed, 01 May 2013 18:48:25 GMT
       Etag:
-      - ! '"48008-9ba67-4dbac903394c0"'
+      - ! '"1397ae-b8fb1-4dbac90151040"'
       Accept-Ranges:
       - bytes
       Content-Length:
-      - '637543'
+      - '757681'
       Content-Type:
       - application/wsdl+xml
     body:
       encoding: US-ASCII
       string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<definitions xmlns=\"http://schemas.xmlsoap.org/wsdl/\"
         xmlns:soap=\"http://schemas.xmlsoap.org/wsdl/soap/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"
-        xmlns:tns=\"urn:client:api:wsdl:document/literal_wrapped:vers:6.4:aria_complete_api\"
-        targetNamespace=\"urn:client:api:wsdl:document/literal_wrapped:vers:6.4:aria_complete_api\">\n
+        xmlns:tns=\"urn:client:api:wsdl:document/literal_wrapped:vers:6.5:aria_complete_api\"
+        targetNamespace=\"urn:client:api:wsdl:document/literal_wrapped:vers:6.5:aria_complete_api\">\n
         \ <types>\n    <xsd:schema xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"
-        xmlns:tns=\"urn:client:api:wsdl:document/literal_wrapped:vers:6.4:aria_complete_api\"
-        targetNamespace=\"urn:client:api:wsdl:document/literal_wrapped:vers:6.4:aria_complete_api\"
+        xmlns:tns=\"urn:client:api:wsdl:document/literal_wrapped:vers:6.5:aria_complete_api\"
+        targetNamespace=\"urn:client:api:wsdl:document/literal_wrapped:vers:6.5:aria_complete_api\"
         elementFormDefault=\"qualified\">\n      <xsd:complexType name=\"supp_field_names_row\">\n
         \       <xsd:sequence>\n          <xsd:element name=\"supp_field_names\" type=\"xsd:string\"
         minOccurs=\"0\" maxOccurs=\"1\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n
@@ -223,39 +192,105 @@ http_interactions:
         name=\"optional_transaction_qualifiers_array\">\n        <xsd:sequence>\n
         \         <xsd:element minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"optional_transaction_qualifiers_row\"
         type=\"tns:optional_transaction_qualifiers_row\"/>\n        </xsd:sequence>\n
-        \     </xsd:complexType>\n      <xsd:complexType name=\"order_line_items_row\">\n
-        \       <xsd:sequence>\n          <xsd:element name=\"client_sku\" type=\"xsd:string\"
-        minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element name=\"units\" type=\"xsd:double\"
-        minOccurs=\"1\" maxOccurs=\"1\"/>\n          <xsd:element name=\"amount\"
-        type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element
-        name=\"unit_discount_amount\" type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
-        \       </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
-        name=\"order_line_items_array\">\n        <xsd:sequence>\n          <xsd:element
-        minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"order_line_items_row\" type=\"tns:order_line_items_row\"/>\n
-        \       </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
-        name=\"cart_invoice_line_items_ReturnElement\">\n        <xsd:sequence>\n
-        \         <xsd:element name=\"line_no\" type=\"xsd:long\" minOccurs=\"0\"
-        maxOccurs=\"1\"/>\n          <xsd:element name=\"service_no\" type=\"xsd:long\"
-        minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element name=\"service_name\"
-        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element
-        name=\"service_is_tax_ind\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
-        \         <xsd:element name=\"line_units\" type=\"xsd:double\" minOccurs=\"0\"
-        maxOccurs=\"1\"/>\n          <xsd:element name=\"rate_per_unit\" type=\"xsd:double\"
-        minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element name=\"line_amount\"
-        type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element
-        name=\"description\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
-        \         <xsd:element name=\"date_range_start\" type=\"xsd:string\" minOccurs=\"0\"
-        maxOccurs=\"1\"/>\n          <xsd:element name=\"date_range_end\" type=\"xsd:string\"
-        minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element name=\"usage_type_no\"
+        \     </xsd:complexType>\n      <xsd:complexType name=\"credit_templates_ReturnElement\">\n
+        \       <xsd:sequence>\n          <xsd:element name=\"credit_template_no\"
         type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element
-        name=\"plan_no\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element
-        name=\"plan_name\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        name=\"template_name\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \         <xsd:element name=\"flat_amount\" type=\"xsd:double\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n          <xsd:element name=\"percent_amount\" type=\"xsd:double\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element name=\"percent_eval_plan_no\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element
+        name=\"percent_eval_service_no\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \         <xsd:element name=\"currency_cd\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n          <xsd:element name=\"eligible_plan_no\" type=\"xsd:long\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element name=\"eligible_service_no\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element
+        name=\"alt_service_no_2_apply\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \         <xsd:element name=\"num_credits_required\" type=\"xsd:double\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n          <xsd:element name=\"credit_interval_months\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n        </xsd:sequence>\n
+        \     </xsd:complexType>\n      <xsd:complexType name=\"discount_bundle_no_ReturnElement\">\n
+        \       <xsd:sequence>\n          <xsd:element name=\"bundle_no\" type=\"xsd:long\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n
+        \     <xsd:complexType name=\"discount_rules_ReturnElement\">\n        <xsd:sequence>\n
+        \         <xsd:element name=\"rule_no\" type=\"xsd:long\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n          <xsd:element name=\"client_rule_id\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element name=\"rule_name\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element
+        name=\"scope_no\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element
+        name=\"description\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \         <xsd:element name=\"flat_percent_ind\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n          <xsd:element name=\"currency_cd\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element name=\"amount\"
+        type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element
+        name=\"inline_offset_ind\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \         <xsd:element name=\"duration_type_ind\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n          <xsd:element name=\"max_applicable_months\" type=\"xsd:long\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element name=\"max_applications_per_acct\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element
+        name=\"ext_description\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \         <xsd:element name=\"alt_service_no_2_apply\" type=\"xsd:long\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n          <xsd:element name=\"discount_bundle_no\" type=\"tns:discount_bundle_no_ReturnElement\"
+        minOccurs=\"0\" maxOccurs=\"unbounded\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n
+        \     <xsd:complexType name=\"discount_bundles_ReturnElement\">\n        <xsd:sequence>\n
+        \         <xsd:element name=\"bundle_no\" type=\"xsd:long\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n          <xsd:element name=\"client_bundle_id\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element name=\"bundle_name\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element
+        name=\"description\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
         \       </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
-        name=\"specific_charge_transaction_id_row\">\n        <xsd:sequence>\n          <xsd:element
-        name=\"specific_charge_transaction_id\" type=\"xsd:long\" minOccurs=\"0\"
-        maxOccurs=\"1\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
-        name=\"specific_charge_transaction_id_array\">\n        <xsd:sequence>\n          <xsd:element
-        minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"specific_charge_transaction_id_row\"
+        name=\"coupons_ReturnElement\">\n        <xsd:sequence>\n          <xsd:element
+        name=\"out_coupon_cd\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \         <xsd:element name=\"description\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n          <xsd:element name=\"start_date\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element name=\"exp_date\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element
+        name=\"max_uses\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element
+        name=\"total_uses\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \         <xsd:element name=\"currency_cd\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n          <xsd:element name=\"recur_discount_flat_amt\"
+        type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element
+        name=\"one_time_discount_flat_amt\" type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \         <xsd:element name=\"recur_discount_pct\" type=\"xsd:double\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n          <xsd:element name=\"one_time_discount_pct\" type=\"xsd:double\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element name=\"credit_templates\"
+        type=\"tns:credit_templates_ReturnElement\" minOccurs=\"0\" maxOccurs=\"unbounded\"/>\n
+        \         <xsd:element name=\"discount_rules\" type=\"tns:discount_rules_ReturnElement\"
+        minOccurs=\"0\" maxOccurs=\"unbounded\"/>\n          <xsd:element name=\"discount_bundles\"
+        type=\"tns:discount_bundles_ReturnElement\" minOccurs=\"0\" maxOccurs=\"unbounded\"/>\n
+        \       </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
+        name=\"order_line_items_row\">\n        <xsd:sequence>\n          <xsd:element
+        name=\"client_sku\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \         <xsd:element name=\"units\" type=\"xsd:double\" minOccurs=\"1\"
+        maxOccurs=\"1\"/>\n          <xsd:element name=\"amount\" type=\"xsd:double\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element name=\"unit_discount_amount\"
+        type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n        </xsd:sequence>\n
+        \     </xsd:complexType>\n      <xsd:complexType name=\"order_line_items_array\">\n
+        \       <xsd:sequence>\n          <xsd:element minOccurs=\"0\" maxOccurs=\"unbounded\"
+        name=\"order_line_items_row\" type=\"tns:order_line_items_row\"/>\n        </xsd:sequence>\n
+        \     </xsd:complexType>\n      <xsd:complexType name=\"cart_invoice_line_items_ReturnElement\">\n
+        \       <xsd:sequence>\n          <xsd:element name=\"line_no\" type=\"xsd:long\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element name=\"service_no\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element
+        name=\"service_name\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \         <xsd:element name=\"service_is_tax_ind\" type=\"xsd:long\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n          <xsd:element name=\"line_units\" type=\"xsd:double\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element name=\"rate_per_unit\"
+        type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element
+        name=\"line_amount\" type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \         <xsd:element name=\"description\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n          <xsd:element name=\"date_range_start\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element name=\"date_range_end\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element
+        name=\"usage_type_no\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \         <xsd:element name=\"plan_no\" type=\"xsd:long\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n          <xsd:element name=\"plan_name\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n
+        \     <xsd:complexType name=\"specific_charge_transaction_id_row\">\n        <xsd:sequence>\n
+        \         <xsd:element name=\"specific_charge_transaction_id\" type=\"xsd:long\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n
+        \     <xsd:complexType name=\"specific_charge_transaction_id_array\">\n        <xsd:sequence>\n
+        \         <xsd:element minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"specific_charge_transaction_id_row\"
         type=\"tns:specific_charge_transaction_id_row\"/>\n        </xsd:sequence>\n
         \     </xsd:complexType>\n      <xsd:complexType name=\"standing_order_row\">\n
         \       <xsd:sequence>\n          <xsd:element name=\"client_sku\" type=\"xsd:string\"
@@ -934,6 +969,643 @@ http_interactions:
         \       <xsd:sequence>\n          <xsd:element name=\"out_contract_no\" type=\"xsd:long\"
         minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element name=\"out_contract_plan_no\"
         type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n        </xsd:sequence>\n
+        \     </xsd:complexType>\n      <xsd:complexType name=\"new_acct_invoice_line_items_ReturnElement\">\n
+        \       <xsd:sequence>\n          <xsd:element name=\"invoice_line_no\" type=\"xsd:long\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element name=\"invoice_plan_no\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element
+        name=\"invoice_plan_name\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \         <xsd:element name=\"invoice_service_no\" type=\"xsd:long\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n          <xsd:element name=\"invoice_service_name\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element name=\"invoice_service_coa_id\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element
+        name=\"invoice_units\" type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \         <xsd:element name=\"invoice_rate_per_unit\" type=\"xsd:double\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element name=\"invoice_line_amount\"
+        type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element
+        name=\"invoice_line_description\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \         <xsd:element name=\"invoice_start_date_range\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element name=\"invoice_end_date_range\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n        </xsd:sequence>\n
+        \     </xsd:complexType>\n      <xsd:complexType name=\"a1_supp_plans_row\">\n
+        \       <xsd:sequence>\n          <xsd:element name=\"a1_supp_plans\" type=\"xsd:long\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n
+        \     <xsd:complexType name=\"a1_supp_plans_array\">\n        <xsd:sequence>\n
+        \         <xsd:element minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"a1_supp_plans_row\"
+        type=\"tns:a1_supp_plans_row\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n
+        \     <xsd:complexType name=\"a1_supp_plan_units_row\">\n        <xsd:sequence>\n
+        \         <xsd:element name=\"a1_supp_plan_units\" type=\"xsd:long\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
+        name=\"a1_supp_plan_units_array\">\n        <xsd:sequence>\n          <xsd:element
+        minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"a1_supp_plan_units_row\" type=\"tns:a1_supp_plan_units_row\"/>\n
+        \       </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
+        name=\"a1_functional_acct_groups_row\">\n        <xsd:sequence>\n          <xsd:element
+        name=\"a1_functional_acct_groups\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \       </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
+        name=\"a1_functional_acct_groups_array\">\n        <xsd:sequence>\n          <xsd:element
+        minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"a1_functional_acct_groups_row\"
+        type=\"tns:a1_functional_acct_groups_row\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n
+        \     <xsd:complexType name=\"a1_collections_acct_groups_row\">\n        <xsd:sequence>\n
+        \         <xsd:element name=\"a1_collections_acct_groups\" type=\"xsd:long\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n
+        \     <xsd:complexType name=\"a1_collections_acct_groups_array\">\n        <xsd:sequence>\n
+        \         <xsd:element minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"a1_collections_acct_groups_row\"
+        type=\"tns:a1_collections_acct_groups_row\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n
+        \     <xsd:complexType name=\"a1_supp_field_names_row\">\n        <xsd:sequence>\n
+        \         <xsd:element name=\"a1_supp_field_names\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
+        name=\"a1_supp_field_names_array\">\n        <xsd:sequence>\n          <xsd:element
+        minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"a1_supp_field_names_row\" type=\"tns:a1_supp_field_names_row\"/>\n
+        \       </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
+        name=\"a1_supp_field_values_row\">\n        <xsd:sequence>\n          <xsd:element
+        name=\"a1_supp_field_values\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \       </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
+        name=\"a1_supp_field_values_array\">\n        <xsd:sequence>\n          <xsd:element
+        minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"a1_supp_field_values_row\"
+        type=\"tns:a1_supp_field_values_row\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n
+        \     <xsd:complexType name=\"a1_supp_plan_alt_rate_sched_no_row\">\n        <xsd:sequence>\n
+        \         <xsd:element name=\"a1_supp_plan_alt_rate_sched_no\" type=\"xsd:long\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n
+        \     <xsd:complexType name=\"a1_supp_plan_alt_rate_sched_no_array\">\n        <xsd:sequence>\n
+        \         <xsd:element minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"a1_supp_plan_alt_rate_sched_no_row\"
+        type=\"tns:a1_supp_plan_alt_rate_sched_no_row\"/>\n        </xsd:sequence>\n
+        \     </xsd:complexType>\n      <xsd:complexType name=\"a1_coupon_codes_row\">\n
+        \       <xsd:sequence>\n          <xsd:element name=\"a1_coupon_codes\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n
+        \     <xsd:complexType name=\"a1_coupon_codes_array\">\n        <xsd:sequence>\n
+        \         <xsd:element minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"a1_coupon_codes_row\"
+        type=\"tns:a1_coupon_codes_row\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n
+        \     <xsd:complexType name=\"a1_new_acct_custom_rates_row\">\n        <xsd:sequence>\n
+        \         <xsd:element name=\"a1_custom_rate_plan_no\" type=\"xsd:long\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n          <xsd:element name=\"a1_custom_rate_service_no\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element
+        name=\"a1_custom_rate_seq_no\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \         <xsd:element name=\"a1_custom_rate_from_unit\" type=\"xsd:long\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element name=\"a1_custom_rate_to_unit\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element
+        name=\"a1_custom_rate_per_unit\" type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \       </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
+        name=\"a1_new_acct_custom_rates_array\">\n        <xsd:sequence>\n          <xsd:element
+        minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"a1_new_acct_custom_rates_row\"
+        type=\"tns:a1_new_acct_custom_rates_row\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n
+        \     <xsd:complexType name=\"a1_new_acct_plan_contracts_row\">\n        <xsd:sequence>\n
+        \         <xsd:element name=\"a1_contract_plan_no\" type=\"xsd:long\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n          <xsd:element name=\"a1_contract_type_no\" type=\"xsd:long\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element name=\"a1_contract_alt_recur_fee\"
+        type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element
+        name=\"a1_contract_length_months\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \         <xsd:element name=\"a1_contract_cancel_fee\" type=\"xsd:double\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element name=\"a1_contract_comments\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element
+        name=\"a1_contract_start_date\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \       </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
+        name=\"a1_new_acct_plan_contracts_array\">\n        <xsd:sequence>\n          <xsd:element
+        minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"a1_new_acct_plan_contracts_row\"
+        type=\"tns:a1_new_acct_plan_contracts_row\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n
+        \     <xsd:complexType name=\"a1_usage_accumulation_config_row\">\n        <xsd:sequence>\n
+        \         <xsd:element name=\"a1_usage_accumulation_plan_no\" type=\"xsd:long\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element name=\"a1_usage_accumulation_reset_months\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n        </xsd:sequence>\n
+        \     </xsd:complexType>\n      <xsd:complexType name=\"a1_usage_accumulation_config_array\">\n
+        \       <xsd:sequence>\n          <xsd:element minOccurs=\"0\" maxOccurs=\"unbounded\"
+        name=\"a1_usage_accumulation_config_row\" type=\"tns:a1_usage_accumulation_config_row\"/>\n
+        \       </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
+        name=\"a1_enable_usage_pooling_plan_no_row\">\n        <xsd:sequence>\n          <xsd:element
+        name=\"a1_enable_usage_pooling_plan_no\" type=\"xsd:long\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
+        name=\"a1_enable_usage_pooling_plan_no_array\">\n        <xsd:sequence>\n
+        \         <xsd:element minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"a1_enable_usage_pooling_plan_no_row\"
+        type=\"tns:a1_enable_usage_pooling_plan_no_row\"/>\n        </xsd:sequence>\n
+        \     </xsd:complexType>\n      <xsd:complexType name=\"a1_client_func_acct_group_ids_row\">\n
+        \       <xsd:sequence>\n          <xsd:element name=\"a1_client_func_acct_group_ids\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n        </xsd:sequence>\n
+        \     </xsd:complexType>\n      <xsd:complexType name=\"a1_client_func_acct_group_ids_array\">\n
+        \       <xsd:sequence>\n          <xsd:element minOccurs=\"0\" maxOccurs=\"unbounded\"
+        name=\"a1_client_func_acct_group_ids_row\" type=\"tns:a1_client_func_acct_group_ids_row\"/>\n
+        \       </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
+        name=\"a1_client_coll_acct_group_ids_row\">\n        <xsd:sequence>\n          <xsd:element
+        name=\"a1_client_coll_acct_group_ids\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
+        name=\"a1_client_coll_acct_group_ids_array\">\n        <xsd:sequence>\n          <xsd:element
+        minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"a1_client_coll_acct_group_ids_row\"
+        type=\"tns:a1_client_coll_acct_group_ids_row\"/>\n        </xsd:sequence>\n
+        \     </xsd:complexType>\n      <xsd:complexType name=\"a2_supp_plans_row\">\n
+        \       <xsd:sequence>\n          <xsd:element name=\"a2_supp_plans\" type=\"xsd:long\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n
+        \     <xsd:complexType name=\"a2_supp_plans_array\">\n        <xsd:sequence>\n
+        \         <xsd:element minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"a2_supp_plans_row\"
+        type=\"tns:a2_supp_plans_row\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n
+        \     <xsd:complexType name=\"a2_supp_plan_units_row\">\n        <xsd:sequence>\n
+        \         <xsd:element name=\"a2_supp_plan_units\" type=\"xsd:long\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
+        name=\"a2_supp_plan_units_array\">\n        <xsd:sequence>\n          <xsd:element
+        minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"a2_supp_plan_units_row\" type=\"tns:a2_supp_plan_units_row\"/>\n
+        \       </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
+        name=\"a2_functional_acct_groups_row\">\n        <xsd:sequence>\n          <xsd:element
+        name=\"a2_functional_acct_groups\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \       </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
+        name=\"a2_functional_acct_groups_array\">\n        <xsd:sequence>\n          <xsd:element
+        minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"a2_functional_acct_groups_row\"
+        type=\"tns:a2_functional_acct_groups_row\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n
+        \     <xsd:complexType name=\"a2_collections_acct_groups_row\">\n        <xsd:sequence>\n
+        \         <xsd:element name=\"a2_collections_acct_groups\" type=\"xsd:long\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n
+        \     <xsd:complexType name=\"a2_collections_acct_groups_array\">\n        <xsd:sequence>\n
+        \         <xsd:element minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"a2_collections_acct_groups_row\"
+        type=\"tns:a2_collections_acct_groups_row\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n
+        \     <xsd:complexType name=\"a2_supp_field_names_row\">\n        <xsd:sequence>\n
+        \         <xsd:element name=\"a2_supp_field_names\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
+        name=\"a2_supp_field_names_array\">\n        <xsd:sequence>\n          <xsd:element
+        minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"a2_supp_field_names_row\" type=\"tns:a2_supp_field_names_row\"/>\n
+        \       </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
+        name=\"a2_supp_field_values_row\">\n        <xsd:sequence>\n          <xsd:element
+        name=\"a2_supp_field_values\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \       </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
+        name=\"a2_supp_field_values_array\">\n        <xsd:sequence>\n          <xsd:element
+        minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"a2_supp_field_values_row\"
+        type=\"tns:a2_supp_field_values_row\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n
+        \     <xsd:complexType name=\"a2_supp_plan_alt_rate_sched_no_row\">\n        <xsd:sequence>\n
+        \         <xsd:element name=\"a2_supp_plan_alt_rate_sched_no\" type=\"xsd:long\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n
+        \     <xsd:complexType name=\"a2_supp_plan_alt_rate_sched_no_array\">\n        <xsd:sequence>\n
+        \         <xsd:element minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"a2_supp_plan_alt_rate_sched_no_row\"
+        type=\"tns:a2_supp_plan_alt_rate_sched_no_row\"/>\n        </xsd:sequence>\n
+        \     </xsd:complexType>\n      <xsd:complexType name=\"a2_coupon_codes_row\">\n
+        \       <xsd:sequence>\n          <xsd:element name=\"a2_coupon_codes\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n
+        \     <xsd:complexType name=\"a2_coupon_codes_array\">\n        <xsd:sequence>\n
+        \         <xsd:element minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"a2_coupon_codes_row\"
+        type=\"tns:a2_coupon_codes_row\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n
+        \     <xsd:complexType name=\"a2_new_acct_custom_rates_row\">\n        <xsd:sequence>\n
+        \         <xsd:element name=\"a2_custom_rate_plan_no\" type=\"xsd:long\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n          <xsd:element name=\"a2_custom_rate_service_no\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element
+        name=\"a2_custom_rate_seq_no\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \         <xsd:element name=\"a2_custom_rate_from_unit\" type=\"xsd:long\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element name=\"a2_custom_rate_to_unit\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element
+        name=\"a2_custom_rate_per_unit\" type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \       </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
+        name=\"a2_new_acct_custom_rates_array\">\n        <xsd:sequence>\n          <xsd:element
+        minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"a2_new_acct_custom_rates_row\"
+        type=\"tns:a2_new_acct_custom_rates_row\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n
+        \     <xsd:complexType name=\"a2_new_acct_plan_contracts_row\">\n        <xsd:sequence>\n
+        \         <xsd:element name=\"a2_contract_plan_no\" type=\"xsd:long\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n          <xsd:element name=\"a2_contract_type_no\" type=\"xsd:long\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element name=\"a2_contract_alt_recur_fee\"
+        type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element
+        name=\"a2_contract_length_months\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \         <xsd:element name=\"a2_contract_cancel_fee\" type=\"xsd:double\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element name=\"a2_contract_comments\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element
+        name=\"a2_contract_start_date\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \       </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
+        name=\"a2_new_acct_plan_contracts_array\">\n        <xsd:sequence>\n          <xsd:element
+        minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"a2_new_acct_plan_contracts_row\"
+        type=\"tns:a2_new_acct_plan_contracts_row\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n
+        \     <xsd:complexType name=\"a2_usage_accumulation_config_row\">\n        <xsd:sequence>\n
+        \         <xsd:element name=\"a2_usage_accumulation_plan_no\" type=\"xsd:long\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element name=\"a2_usage_accumulation_reset_months\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n        </xsd:sequence>\n
+        \     </xsd:complexType>\n      <xsd:complexType name=\"a2_usage_accumulation_config_array\">\n
+        \       <xsd:sequence>\n          <xsd:element minOccurs=\"0\" maxOccurs=\"unbounded\"
+        name=\"a2_usage_accumulation_config_row\" type=\"tns:a2_usage_accumulation_config_row\"/>\n
+        \       </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
+        name=\"a2_enable_usage_pooling_plan_no_row\">\n        <xsd:sequence>\n          <xsd:element
+        name=\"a2_enable_usage_pooling_plan_no\" type=\"xsd:long\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
+        name=\"a2_enable_usage_pooling_plan_no_array\">\n        <xsd:sequence>\n
+        \         <xsd:element minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"a2_enable_usage_pooling_plan_no_row\"
+        type=\"tns:a2_enable_usage_pooling_plan_no_row\"/>\n        </xsd:sequence>\n
+        \     </xsd:complexType>\n      <xsd:complexType name=\"a2_client_func_acct_group_ids_row\">\n
+        \       <xsd:sequence>\n          <xsd:element name=\"a2_client_func_acct_group_ids\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n        </xsd:sequence>\n
+        \     </xsd:complexType>\n      <xsd:complexType name=\"a2_client_func_acct_group_ids_array\">\n
+        \       <xsd:sequence>\n          <xsd:element minOccurs=\"0\" maxOccurs=\"unbounded\"
+        name=\"a2_client_func_acct_group_ids_row\" type=\"tns:a2_client_func_acct_group_ids_row\"/>\n
+        \       </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
+        name=\"a2_client_coll_acct_group_ids_row\">\n        <xsd:sequence>\n          <xsd:element
+        name=\"a2_client_coll_acct_group_ids\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
+        name=\"a2_client_coll_acct_group_ids_array\">\n        <xsd:sequence>\n          <xsd:element
+        minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"a2_client_coll_acct_group_ids_row\"
+        type=\"tns:a2_client_coll_acct_group_ids_row\"/>\n        </xsd:sequence>\n
+        \     </xsd:complexType>\n      <xsd:complexType name=\"a3_supp_plans_row\">\n
+        \       <xsd:sequence>\n          <xsd:element name=\"a3_supp_plans\" type=\"xsd:long\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n
+        \     <xsd:complexType name=\"a3_supp_plans_array\">\n        <xsd:sequence>\n
+        \         <xsd:element minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"a3_supp_plans_row\"
+        type=\"tns:a3_supp_plans_row\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n
+        \     <xsd:complexType name=\"a3_supp_plan_units_row\">\n        <xsd:sequence>\n
+        \         <xsd:element name=\"a3_supp_plan_units\" type=\"xsd:long\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
+        name=\"a3_supp_plan_units_array\">\n        <xsd:sequence>\n          <xsd:element
+        minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"a3_supp_plan_units_row\" type=\"tns:a3_supp_plan_units_row\"/>\n
+        \       </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
+        name=\"a3_functional_acct_groups_row\">\n        <xsd:sequence>\n          <xsd:element
+        name=\"a3_functional_acct_groups\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \       </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
+        name=\"a3_functional_acct_groups_array\">\n        <xsd:sequence>\n          <xsd:element
+        minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"a3_functional_acct_groups_row\"
+        type=\"tns:a3_functional_acct_groups_row\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n
+        \     <xsd:complexType name=\"a3_collections_acct_groups_row\">\n        <xsd:sequence>\n
+        \         <xsd:element name=\"a3_collections_acct_groups\" type=\"xsd:long\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n
+        \     <xsd:complexType name=\"a3_collections_acct_groups_array\">\n        <xsd:sequence>\n
+        \         <xsd:element minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"a3_collections_acct_groups_row\"
+        type=\"tns:a3_collections_acct_groups_row\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n
+        \     <xsd:complexType name=\"a3_supp_field_names_row\">\n        <xsd:sequence>\n
+        \         <xsd:element name=\"a3_supp_field_names\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
+        name=\"a3_supp_field_names_array\">\n        <xsd:sequence>\n          <xsd:element
+        minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"a3_supp_field_names_row\" type=\"tns:a3_supp_field_names_row\"/>\n
+        \       </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
+        name=\"a3_supp_field_values_row\">\n        <xsd:sequence>\n          <xsd:element
+        name=\"a3_supp_field_values\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \       </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
+        name=\"a3_supp_field_values_array\">\n        <xsd:sequence>\n          <xsd:element
+        minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"a3_supp_field_values_row\"
+        type=\"tns:a3_supp_field_values_row\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n
+        \     <xsd:complexType name=\"a3_supp_plan_alt_rate_sched_no_row\">\n        <xsd:sequence>\n
+        \         <xsd:element name=\"a3_supp_plan_alt_rate_sched_no\" type=\"xsd:long\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n
+        \     <xsd:complexType name=\"a3_supp_plan_alt_rate_sched_no_array\">\n        <xsd:sequence>\n
+        \         <xsd:element minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"a3_supp_plan_alt_rate_sched_no_row\"
+        type=\"tns:a3_supp_plan_alt_rate_sched_no_row\"/>\n        </xsd:sequence>\n
+        \     </xsd:complexType>\n      <xsd:complexType name=\"a3_coupon_codes_row\">\n
+        \       <xsd:sequence>\n          <xsd:element name=\"a3_coupon_codes\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n
+        \     <xsd:complexType name=\"a3_coupon_codes_array\">\n        <xsd:sequence>\n
+        \         <xsd:element minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"a3_coupon_codes_row\"
+        type=\"tns:a3_coupon_codes_row\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n
+        \     <xsd:complexType name=\"a3_new_acct_custom_rates_row\">\n        <xsd:sequence>\n
+        \         <xsd:element name=\"a3_custom_rate_plan_no\" type=\"xsd:long\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n          <xsd:element name=\"a3_custom_rate_service_no\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element
+        name=\"a3_custom_rate_seq_no\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \         <xsd:element name=\"a3_custom_rate_from_unit\" type=\"xsd:long\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element name=\"a3_custom_rate_to_unit\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element
+        name=\"a3_custom_rate_per_unit\" type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \       </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
+        name=\"a3_new_acct_custom_rates_array\">\n        <xsd:sequence>\n          <xsd:element
+        minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"a3_new_acct_custom_rates_row\"
+        type=\"tns:a3_new_acct_custom_rates_row\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n
+        \     <xsd:complexType name=\"a3_new_acct_plan_contracts_row\">\n        <xsd:sequence>\n
+        \         <xsd:element name=\"a3_contract_plan_no\" type=\"xsd:long\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n          <xsd:element name=\"a3_contract_type_no\" type=\"xsd:long\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element name=\"a3_contract_alt_recur_fee\"
+        type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element
+        name=\"a3_contract_length_months\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \         <xsd:element name=\"a3_contract_cancel_fee\" type=\"xsd:double\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element name=\"a3_contract_comments\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element
+        name=\"a3_contract_start_date\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \       </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
+        name=\"a3_new_acct_plan_contracts_array\">\n        <xsd:sequence>\n          <xsd:element
+        minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"a3_new_acct_plan_contracts_row\"
+        type=\"tns:a3_new_acct_plan_contracts_row\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n
+        \     <xsd:complexType name=\"a3_usage_accumulation_config_row\">\n        <xsd:sequence>\n
+        \         <xsd:element name=\"a3_usage_accumulation_plan_no\" type=\"xsd:long\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element name=\"a3_usage_accumulation_reset_months\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n        </xsd:sequence>\n
+        \     </xsd:complexType>\n      <xsd:complexType name=\"a3_usage_accumulation_config_array\">\n
+        \       <xsd:sequence>\n          <xsd:element minOccurs=\"0\" maxOccurs=\"unbounded\"
+        name=\"a3_usage_accumulation_config_row\" type=\"tns:a3_usage_accumulation_config_row\"/>\n
+        \       </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
+        name=\"a3_enable_usage_pooling_plan_no_row\">\n        <xsd:sequence>\n          <xsd:element
+        name=\"a3_enable_usage_pooling_plan_no\" type=\"xsd:long\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
+        name=\"a3_enable_usage_pooling_plan_no_array\">\n        <xsd:sequence>\n
+        \         <xsd:element minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"a3_enable_usage_pooling_plan_no_row\"
+        type=\"tns:a3_enable_usage_pooling_plan_no_row\"/>\n        </xsd:sequence>\n
+        \     </xsd:complexType>\n      <xsd:complexType name=\"a3_client_func_acct_group_ids_row\">\n
+        \       <xsd:sequence>\n          <xsd:element name=\"a3_client_func_acct_group_ids\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n        </xsd:sequence>\n
+        \     </xsd:complexType>\n      <xsd:complexType name=\"a3_client_func_acct_group_ids_array\">\n
+        \       <xsd:sequence>\n          <xsd:element minOccurs=\"0\" maxOccurs=\"unbounded\"
+        name=\"a3_client_func_acct_group_ids_row\" type=\"tns:a3_client_func_acct_group_ids_row\"/>\n
+        \       </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
+        name=\"a3_client_coll_acct_group_ids_row\">\n        <xsd:sequence>\n          <xsd:element
+        name=\"a3_client_coll_acct_group_ids\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
+        name=\"a3_client_coll_acct_group_ids_array\">\n        <xsd:sequence>\n          <xsd:element
+        minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"a3_client_coll_acct_group_ids_row\"
+        type=\"tns:a3_client_coll_acct_group_ids_row\"/>\n        </xsd:sequence>\n
+        \     </xsd:complexType>\n      <xsd:complexType name=\"a4_supp_plans_row\">\n
+        \       <xsd:sequence>\n          <xsd:element name=\"a4_supp_plans\" type=\"xsd:long\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n
+        \     <xsd:complexType name=\"a4_supp_plans_array\">\n        <xsd:sequence>\n
+        \         <xsd:element minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"a4_supp_plans_row\"
+        type=\"tns:a4_supp_plans_row\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n
+        \     <xsd:complexType name=\"a4_supp_plan_units_row\">\n        <xsd:sequence>\n
+        \         <xsd:element name=\"a4_supp_plan_units\" type=\"xsd:long\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
+        name=\"a4_supp_plan_units_array\">\n        <xsd:sequence>\n          <xsd:element
+        minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"a4_supp_plan_units_row\" type=\"tns:a4_supp_plan_units_row\"/>\n
+        \       </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
+        name=\"a4_functional_acct_groups_row\">\n        <xsd:sequence>\n          <xsd:element
+        name=\"a4_functional_acct_groups\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \       </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
+        name=\"a4_functional_acct_groups_array\">\n        <xsd:sequence>\n          <xsd:element
+        minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"a4_functional_acct_groups_row\"
+        type=\"tns:a4_functional_acct_groups_row\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n
+        \     <xsd:complexType name=\"a4_collections_acct_groups_row\">\n        <xsd:sequence>\n
+        \         <xsd:element name=\"a4_collections_acct_groups\" type=\"xsd:long\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n
+        \     <xsd:complexType name=\"a4_collections_acct_groups_array\">\n        <xsd:sequence>\n
+        \         <xsd:element minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"a4_collections_acct_groups_row\"
+        type=\"tns:a4_collections_acct_groups_row\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n
+        \     <xsd:complexType name=\"a4_supp_field_names_row\">\n        <xsd:sequence>\n
+        \         <xsd:element name=\"a4_supp_field_names\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
+        name=\"a4_supp_field_names_array\">\n        <xsd:sequence>\n          <xsd:element
+        minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"a4_supp_field_names_row\" type=\"tns:a4_supp_field_names_row\"/>\n
+        \       </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
+        name=\"a4_supp_field_values_row\">\n        <xsd:sequence>\n          <xsd:element
+        name=\"a4_supp_field_values\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \       </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
+        name=\"a4_supp_field_values_array\">\n        <xsd:sequence>\n          <xsd:element
+        minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"a4_supp_field_values_row\"
+        type=\"tns:a4_supp_field_values_row\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n
+        \     <xsd:complexType name=\"a4_supp_plan_alt_rate_sched_no_row\">\n        <xsd:sequence>\n
+        \         <xsd:element name=\"a4_supp_plan_alt_rate_sched_no\" type=\"xsd:long\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n
+        \     <xsd:complexType name=\"a4_supp_plan_alt_rate_sched_no_array\">\n        <xsd:sequence>\n
+        \         <xsd:element minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"a4_supp_plan_alt_rate_sched_no_row\"
+        type=\"tns:a4_supp_plan_alt_rate_sched_no_row\"/>\n        </xsd:sequence>\n
+        \     </xsd:complexType>\n      <xsd:complexType name=\"a4_coupon_codes_row\">\n
+        \       <xsd:sequence>\n          <xsd:element name=\"a4_coupon_codes\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n
+        \     <xsd:complexType name=\"a4_coupon_codes_array\">\n        <xsd:sequence>\n
+        \         <xsd:element minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"a4_coupon_codes_row\"
+        type=\"tns:a4_coupon_codes_row\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n
+        \     <xsd:complexType name=\"a4_new_acct_custom_rates_row\">\n        <xsd:sequence>\n
+        \         <xsd:element name=\"a4_custom_rate_plan_no\" type=\"xsd:long\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n          <xsd:element name=\"a4_custom_rate_service_no\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element
+        name=\"a4_custom_rate_seq_no\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \         <xsd:element name=\"a4_custom_rate_from_unit\" type=\"xsd:long\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element name=\"a4_custom_rate_to_unit\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element
+        name=\"a4_custom_rate_per_unit\" type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \       </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
+        name=\"a4_new_acct_custom_rates_array\">\n        <xsd:sequence>\n          <xsd:element
+        minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"a4_new_acct_custom_rates_row\"
+        type=\"tns:a4_new_acct_custom_rates_row\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n
+        \     <xsd:complexType name=\"a4_new_acct_plan_contracts_row\">\n        <xsd:sequence>\n
+        \         <xsd:element name=\"a4_contract_plan_no\" type=\"xsd:long\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n          <xsd:element name=\"a4_contract_type_no\" type=\"xsd:long\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element name=\"a4_contract_alt_recur_fee\"
+        type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element
+        name=\"a4_contract_length_months\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \         <xsd:element name=\"a4_contract_cancel_fee\" type=\"xsd:double\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element name=\"a4_contract_comments\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element
+        name=\"a4_contract_start_date\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \       </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
+        name=\"a4_new_acct_plan_contracts_array\">\n        <xsd:sequence>\n          <xsd:element
+        minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"a4_new_acct_plan_contracts_row\"
+        type=\"tns:a4_new_acct_plan_contracts_row\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n
+        \     <xsd:complexType name=\"a4_usage_accumulation_config_row\">\n        <xsd:sequence>\n
+        \         <xsd:element name=\"a4_usage_accumulation_plan_no\" type=\"xsd:long\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element name=\"a4_usage_accumulation_reset_months\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n        </xsd:sequence>\n
+        \     </xsd:complexType>\n      <xsd:complexType name=\"a4_usage_accumulation_config_array\">\n
+        \       <xsd:sequence>\n          <xsd:element minOccurs=\"0\" maxOccurs=\"unbounded\"
+        name=\"a4_usage_accumulation_config_row\" type=\"tns:a4_usage_accumulation_config_row\"/>\n
+        \       </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
+        name=\"a4_enable_usage_pooling_plan_no_row\">\n        <xsd:sequence>\n          <xsd:element
+        name=\"a4_enable_usage_pooling_plan_no\" type=\"xsd:long\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
+        name=\"a4_enable_usage_pooling_plan_no_array\">\n        <xsd:sequence>\n
+        \         <xsd:element minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"a4_enable_usage_pooling_plan_no_row\"
+        type=\"tns:a4_enable_usage_pooling_plan_no_row\"/>\n        </xsd:sequence>\n
+        \     </xsd:complexType>\n      <xsd:complexType name=\"a4_client_func_acct_group_ids_row\">\n
+        \       <xsd:sequence>\n          <xsd:element name=\"a4_client_func_acct_group_ids\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n        </xsd:sequence>\n
+        \     </xsd:complexType>\n      <xsd:complexType name=\"a4_client_func_acct_group_ids_array\">\n
+        \       <xsd:sequence>\n          <xsd:element minOccurs=\"0\" maxOccurs=\"unbounded\"
+        name=\"a4_client_func_acct_group_ids_row\" type=\"tns:a4_client_func_acct_group_ids_row\"/>\n
+        \       </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
+        name=\"a4_client_coll_acct_group_ids_row\">\n        <xsd:sequence>\n          <xsd:element
+        name=\"a4_client_coll_acct_group_ids\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
+        name=\"a4_client_coll_acct_group_ids_array\">\n        <xsd:sequence>\n          <xsd:element
+        minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"a4_client_coll_acct_group_ids_row\"
+        type=\"tns:a4_client_coll_acct_group_ids_row\"/>\n        </xsd:sequence>\n
+        \     </xsd:complexType>\n      <xsd:complexType name=\"a5_supp_plans_row\">\n
+        \       <xsd:sequence>\n          <xsd:element name=\"a5_supp_plans\" type=\"xsd:long\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n
+        \     <xsd:complexType name=\"a5_supp_plans_array\">\n        <xsd:sequence>\n
+        \         <xsd:element minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"a5_supp_plans_row\"
+        type=\"tns:a5_supp_plans_row\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n
+        \     <xsd:complexType name=\"a5_supp_plan_units_row\">\n        <xsd:sequence>\n
+        \         <xsd:element name=\"a5_supp_plan_units\" type=\"xsd:long\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
+        name=\"a5_supp_plan_units_array\">\n        <xsd:sequence>\n          <xsd:element
+        minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"a5_supp_plan_units_row\" type=\"tns:a5_supp_plan_units_row\"/>\n
+        \       </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
+        name=\"a5_functional_acct_groups_row\">\n        <xsd:sequence>\n          <xsd:element
+        name=\"a5_functional_acct_groups\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \       </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
+        name=\"a5_functional_acct_groups_array\">\n        <xsd:sequence>\n          <xsd:element
+        minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"a5_functional_acct_groups_row\"
+        type=\"tns:a5_functional_acct_groups_row\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n
+        \     <xsd:complexType name=\"a5_collections_acct_groups_row\">\n        <xsd:sequence>\n
+        \         <xsd:element name=\"a5_collections_acct_groups\" type=\"xsd:long\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n
+        \     <xsd:complexType name=\"a5_collections_acct_groups_array\">\n        <xsd:sequence>\n
+        \         <xsd:element minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"a5_collections_acct_groups_row\"
+        type=\"tns:a5_collections_acct_groups_row\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n
+        \     <xsd:complexType name=\"a5_supp_field_names_row\">\n        <xsd:sequence>\n
+        \         <xsd:element name=\"a5_supp_field_names\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
+        name=\"a5_supp_field_names_array\">\n        <xsd:sequence>\n          <xsd:element
+        minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"a5_supp_field_names_row\" type=\"tns:a5_supp_field_names_row\"/>\n
+        \       </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
+        name=\"a5_supp_field_values_row\">\n        <xsd:sequence>\n          <xsd:element
+        name=\"a5_supp_field_values\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \       </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
+        name=\"a5_supp_field_values_array\">\n        <xsd:sequence>\n          <xsd:element
+        minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"a5_supp_field_values_row\"
+        type=\"tns:a5_supp_field_values_row\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n
+        \     <xsd:complexType name=\"a5_supp_plan_alt_rate_sched_no_row\">\n        <xsd:sequence>\n
+        \         <xsd:element name=\"a5_supp_plan_alt_rate_sched_no\" type=\"xsd:long\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n
+        \     <xsd:complexType name=\"a5_supp_plan_alt_rate_sched_no_array\">\n        <xsd:sequence>\n
+        \         <xsd:element minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"a5_supp_plan_alt_rate_sched_no_row\"
+        type=\"tns:a5_supp_plan_alt_rate_sched_no_row\"/>\n        </xsd:sequence>\n
+        \     </xsd:complexType>\n      <xsd:complexType name=\"a5_coupon_codes_row\">\n
+        \       <xsd:sequence>\n          <xsd:element name=\"a5_coupon_codes\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n
+        \     <xsd:complexType name=\"a5_coupon_codes_array\">\n        <xsd:sequence>\n
+        \         <xsd:element minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"a5_coupon_codes_row\"
+        type=\"tns:a5_coupon_codes_row\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n
+        \     <xsd:complexType name=\"a5_new_acct_custom_rates_row\">\n        <xsd:sequence>\n
+        \         <xsd:element name=\"a5_custom_rate_plan_no\" type=\"xsd:long\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n          <xsd:element name=\"a5_custom_rate_service_no\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element
+        name=\"a5_custom_rate_seq_no\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \         <xsd:element name=\"a5_custom_rate_from_unit\" type=\"xsd:long\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element name=\"a5_custom_rate_to_unit\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element
+        name=\"a5_custom_rate_per_unit\" type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \       </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
+        name=\"a5_new_acct_custom_rates_array\">\n        <xsd:sequence>\n          <xsd:element
+        minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"a5_new_acct_custom_rates_row\"
+        type=\"tns:a5_new_acct_custom_rates_row\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n
+        \     <xsd:complexType name=\"a5_new_acct_plan_contracts_row\">\n        <xsd:sequence>\n
+        \         <xsd:element name=\"a5_contract_plan_no\" type=\"xsd:long\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n          <xsd:element name=\"a5_contract_type_no\" type=\"xsd:long\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element name=\"a5_contract_alt_recur_fee\"
+        type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element
+        name=\"a5_contract_length_months\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \         <xsd:element name=\"a5_contract_cancel_fee\" type=\"xsd:double\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element name=\"a5_contract_comments\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element
+        name=\"a5_contract_start_date\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \       </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
+        name=\"a5_new_acct_plan_contracts_array\">\n        <xsd:sequence>\n          <xsd:element
+        minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"a5_new_acct_plan_contracts_row\"
+        type=\"tns:a5_new_acct_plan_contracts_row\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n
+        \     <xsd:complexType name=\"a5_usage_accumulation_config_row\">\n        <xsd:sequence>\n
+        \         <xsd:element name=\"a5_usage_accumulation_plan_no\" type=\"xsd:long\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element name=\"a5_usage_accumulation_reset_months\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n        </xsd:sequence>\n
+        \     </xsd:complexType>\n      <xsd:complexType name=\"a5_usage_accumulation_config_array\">\n
+        \       <xsd:sequence>\n          <xsd:element minOccurs=\"0\" maxOccurs=\"unbounded\"
+        name=\"a5_usage_accumulation_config_row\" type=\"tns:a5_usage_accumulation_config_row\"/>\n
+        \       </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
+        name=\"a5_enable_usage_pooling_plan_no_row\">\n        <xsd:sequence>\n          <xsd:element
+        name=\"a5_enable_usage_pooling_plan_no\" type=\"xsd:long\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
+        name=\"a5_enable_usage_pooling_plan_no_array\">\n        <xsd:sequence>\n
+        \         <xsd:element minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"a5_enable_usage_pooling_plan_no_row\"
+        type=\"tns:a5_enable_usage_pooling_plan_no_row\"/>\n        </xsd:sequence>\n
+        \     </xsd:complexType>\n      <xsd:complexType name=\"a5_client_func_acct_group_ids_row\">\n
+        \       <xsd:sequence>\n          <xsd:element name=\"a5_client_func_acct_group_ids\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n        </xsd:sequence>\n
+        \     </xsd:complexType>\n      <xsd:complexType name=\"a5_client_func_acct_group_ids_array\">\n
+        \       <xsd:sequence>\n          <xsd:element minOccurs=\"0\" maxOccurs=\"unbounded\"
+        name=\"a5_client_func_acct_group_ids_row\" type=\"tns:a5_client_func_acct_group_ids_row\"/>\n
+        \       </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
+        name=\"a5_client_coll_acct_group_ids_row\">\n        <xsd:sequence>\n          <xsd:element
+        name=\"a5_client_coll_acct_group_ids\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
+        name=\"a5_client_coll_acct_group_ids_array\">\n        <xsd:sequence>\n          <xsd:element
+        minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"a5_client_coll_acct_group_ids_row\"
+        type=\"tns:a5_client_coll_acct_group_ids_row\"/>\n        </xsd:sequence>\n
+        \     </xsd:complexType>\n      <xsd:complexType name=\"a1_out_new_acct_plan_contracts_ReturnElement\">\n
+        \       <xsd:sequence>\n          <xsd:element name=\"a1_out_contract_no\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element
+        name=\"a1_out_contract_plan_no\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \       </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
+        name=\"a1_new_acct_invoice_line_items_ReturnElement\">\n        <xsd:sequence>\n
+        \         <xsd:element name=\"a1_invoice_line_no\" type=\"xsd:long\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n          <xsd:element name=\"a1_invoice_plan_no\" type=\"xsd:long\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element name=\"a1_invoice_plan_name\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element
+        name=\"a1_invoice_service_no\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \         <xsd:element name=\"a1_invoice_service_name\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element name=\"a1_invoice_service_coa_id\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element
+        name=\"a1_invoice_units\" type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \         <xsd:element name=\"a1_invoice_rate_per_unit\" type=\"xsd:double\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element name=\"a1_invoice_line_amount\"
+        type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element
+        name=\"a1_invoice_line_description\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \         <xsd:element name=\"a1_invoice_start_date_range\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element name=\"a1_invoice_end_date_range\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n        </xsd:sequence>\n
+        \     </xsd:complexType>\n      <xsd:complexType name=\"a2_out_new_acct_plan_contracts_ReturnElement\">\n
+        \       <xsd:sequence>\n          <xsd:element name=\"a2_out_contract_no\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element
+        name=\"a2_out_contract_plan_no\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \       </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
+        name=\"a2_new_acct_invoice_line_items_ReturnElement\">\n        <xsd:sequence>\n
+        \         <xsd:element name=\"a2_invoice_line_no\" type=\"xsd:long\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n          <xsd:element name=\"a2_invoice_plan_no\" type=\"xsd:long\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element name=\"a2_invoice_plan_name\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element
+        name=\"a2_invoice_service_no\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \         <xsd:element name=\"a2_invoice_service_name\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element name=\"a2_invoice_service_coa_id\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element
+        name=\"a2_invoice_units\" type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \         <xsd:element name=\"a2_invoice_rate_per_unit\" type=\"xsd:double\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element name=\"a2_invoice_line_amount\"
+        type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element
+        name=\"a2_invoice_line_description\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \         <xsd:element name=\"a2_invoice_start_date_range\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element name=\"a2_invoice_end_date_range\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n        </xsd:sequence>\n
+        \     </xsd:complexType>\n      <xsd:complexType name=\"a3_out_new_acct_plan_contracts_ReturnElement\">\n
+        \       <xsd:sequence>\n          <xsd:element name=\"a3_out_contract_no\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element
+        name=\"a3_out_contract_plan_no\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \       </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
+        name=\"a3_new_acct_invoice_line_items_ReturnElement\">\n        <xsd:sequence>\n
+        \         <xsd:element name=\"a3_invoice_line_no\" type=\"xsd:long\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n          <xsd:element name=\"a3_invoice_plan_no\" type=\"xsd:long\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element name=\"a3_invoice_plan_name\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element
+        name=\"a3_invoice_service_no\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \         <xsd:element name=\"a3_invoice_service_name\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element name=\"a3_invoice_service_coa_id\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element
+        name=\"a3_invoice_units\" type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \         <xsd:element name=\"a3_invoice_rate_per_unit\" type=\"xsd:double\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element name=\"a3_invoice_line_amount\"
+        type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element
+        name=\"a3_invoice_line_description\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \         <xsd:element name=\"a3_invoice_start_date_range\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element name=\"a3_invoice_end_date_range\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n        </xsd:sequence>\n
+        \     </xsd:complexType>\n      <xsd:complexType name=\"a4_out_new_acct_plan_contracts_ReturnElement\">\n
+        \       <xsd:sequence>\n          <xsd:element name=\"a4_out_contract_no\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element
+        name=\"a4_out_contract_plan_no\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \       </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
+        name=\"a4_new_acct_invoice_line_items_ReturnElement\">\n        <xsd:sequence>\n
+        \         <xsd:element name=\"a4_invoice_line_no\" type=\"xsd:long\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n          <xsd:element name=\"a4_invoice_plan_no\" type=\"xsd:long\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element name=\"a4_invoice_plan_name\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element
+        name=\"a4_invoice_service_no\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \         <xsd:element name=\"a4_invoice_service_name\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element name=\"a4_invoice_service_coa_id\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element
+        name=\"a4_invoice_units\" type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \         <xsd:element name=\"a4_invoice_rate_per_unit\" type=\"xsd:double\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element name=\"a4_invoice_line_amount\"
+        type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element
+        name=\"a4_invoice_line_description\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \         <xsd:element name=\"a4_invoice_start_date_range\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element name=\"a4_invoice_end_date_range\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n        </xsd:sequence>\n
+        \     </xsd:complexType>\n      <xsd:complexType name=\"a5_out_new_acct_plan_contracts_ReturnElement\">\n
+        \       <xsd:sequence>\n          <xsd:element name=\"a5_out_contract_no\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element
+        name=\"a5_out_contract_plan_no\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \       </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
+        name=\"a5_new_acct_invoice_line_items_ReturnElement\">\n        <xsd:sequence>\n
+        \         <xsd:element name=\"a5_invoice_line_no\" type=\"xsd:long\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n          <xsd:element name=\"a5_invoice_plan_no\" type=\"xsd:long\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element name=\"a5_invoice_plan_name\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element
+        name=\"a5_invoice_service_no\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \         <xsd:element name=\"a5_invoice_service_name\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element name=\"a5_invoice_service_coa_id\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element
+        name=\"a5_invoice_units\" type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \         <xsd:element name=\"a5_invoice_rate_per_unit\" type=\"xsd:double\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element name=\"a5_invoice_line_amount\"
+        type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element
+        name=\"a5_invoice_line_description\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \         <xsd:element name=\"a5_invoice_start_date_range\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element name=\"a5_invoice_end_date_range\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n        </xsd:sequence>\n
         \     </xsd:complexType>\n      <xsd:complexType name=\"acct_plan_contract_ReturnElement\">\n
         \       <xsd:sequence>\n          <xsd:element name=\"contract_no\" type=\"xsd:long\"
         minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element name=\"type_no\"
@@ -1415,17 +2087,18 @@ http_interactions:
         name=\"contract_start_date\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
         \         <xsd:element name=\"offset_months\" type=\"xsd:long\" minOccurs=\"0\"
         maxOccurs=\"1\"/>\n          <xsd:element name=\"auto_offset_months_option\"
-        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n        </xsd:sequence>\n
-        \     </xsd:complexType>\n      <xsd:complexType name=\"supp_plans_to_assign_array\">\n
-        \       <xsd:sequence>\n          <xsd:element minOccurs=\"0\" maxOccurs=\"unbounded\"
-        name=\"supp_plans_to_assign_row\" type=\"tns:supp_plans_to_assign_row\"/>\n
-        \       </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
-        name=\"client_currency_ReturnElement\">\n        <xsd:sequence>\n          <xsd:element
-        name=\"currency_cd\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
-        \         <xsd:element name=\"currency_name\" type=\"xsd:string\" minOccurs=\"0\"
-        maxOccurs=\"1\"/>\n          <xsd:element name=\"currency_short_name\" type=\"xsd:string\"
-        minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element name=\"iso_4217n\"
         type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element
+        name=\"offset_interval\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \       </xsd:sequence>\n      </xsd:complexType>\n      <xsd:complexType
+        name=\"supp_plans_to_assign_array\">\n        <xsd:sequence>\n          <xsd:element
+        minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"supp_plans_to_assign_row\"
+        type=\"tns:supp_plans_to_assign_row\"/>\n        </xsd:sequence>\n      </xsd:complexType>\n
+        \     <xsd:complexType name=\"client_currency_ReturnElement\">\n        <xsd:sequence>\n
+        \         <xsd:element name=\"currency_cd\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n          <xsd:element name=\"currency_name\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element name=\"currency_short_name\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element
+        name=\"iso_4217n\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n          <xsd:element
         name=\"currency_symbol\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
         \         <xsd:element name=\"currency_html\" type=\"xsd:string\" minOccurs=\"0\"
         maxOccurs=\"1\"/>\n          <xsd:element name=\"default_ind\" type=\"xsd:long\"
@@ -1684,7 +2357,37 @@ http_interactions:
         \           <xsd:element name=\"error_msg\" type=\"xsd:string\" minOccurs=\"0\"
         maxOccurs=\"1\"/>\n            <xsd:element name=\"all_client_plans\" type=\"tns:all_client_plans_ReturnElement\"
         minOccurs=\"0\" maxOccurs=\"unbounded\"/>\n          </xsd:sequence>\n        </xsd:complexType>\n
-        \     </xsd:element>\n      <xsd:element name=\"get_inv_no_from_bal_xfer\">\n
+        \     </xsd:element>\n      <xsd:element name=\"get_coupon_details\">\n        <xsd:complexType>\n
+        \         <xsd:sequence>\n            <xsd:element name=\"client_no\" type=\"xsd:long\"
+        minOccurs=\"1\" maxOccurs=\"1\"/>\n            <xsd:element name=\"auth_key\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"acct_no\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"coupon_cd\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"alt_caller_id\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"optional_transaction_qualifiers\"
+        type=\"tns:optional_transaction_qualifiers_array\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \         </xsd:sequence>\n        </xsd:complexType>\n      </xsd:element>\n
+        \     <xsd:element name=\"get_coupon_detailsResponseElement\">\n        <xsd:complexType>\n
+        \         <xsd:sequence>\n            <xsd:element name=\"error_code\" type=\"xsd:long\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"error_msg\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"coupons\" type=\"tns:coupons_ReturnElement\" minOccurs=\"0\" maxOccurs=\"unbounded\"/>\n
+        \         </xsd:sequence>\n        </xsd:complexType>\n      </xsd:element>\n
+        \     <xsd:element name=\"delete_acct_coupon\">\n        <xsd:complexType>\n
+        \         <xsd:sequence>\n            <xsd:element name=\"client_no\" type=\"xsd:long\"
+        minOccurs=\"1\" maxOccurs=\"1\"/>\n            <xsd:element name=\"auth_key\"
+        type=\"xsd:string\" minOccurs=\"1\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"acct_no\" type=\"xsd:long\" minOccurs=\"1\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"coupon_cd\" type=\"xsd:string\" minOccurs=\"1\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"alt_caller_id\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"optional_transaction_qualifiers\"
+        type=\"tns:optional_transaction_qualifiers_array\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \         </xsd:sequence>\n        </xsd:complexType>\n      </xsd:element>\n
+        \     <xsd:element name=\"delete_acct_couponResponseElement\">\n        <xsd:complexType>\n
+        \         <xsd:sequence>\n            <xsd:element name=\"error_code\" type=\"xsd:long\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"error_msg\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n          </xsd:sequence>\n
+        \       </xsd:complexType>\n      </xsd:element>\n      <xsd:element name=\"get_inv_no_from_bal_xfer\">\n
         \       <xsd:complexType>\n          <xsd:sequence>\n            <xsd:element
         name=\"client_no\" type=\"xsd:long\" minOccurs=\"1\" maxOccurs=\"1\"/>\n            <xsd:element
         name=\"auth_key\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
@@ -3864,9 +4567,10 @@ http_interactions:
         type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
         name=\"new_acct_custom_rates\" type=\"tns:new_acct_custom_rates_array\" minOccurs=\"0\"
         maxOccurs=\"1\"/>\n            <xsd:element name=\"effective_date\" type=\"xsd:string\"
-        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"alt_caller_id\"
-        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
-        name=\"optional_transaction_qualifiers\" type=\"tns:optional_transaction_qualifiers_array\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"offset_interval\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"alt_caller_id\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"optional_transaction_qualifiers\" type=\"tns:optional_transaction_qualifiers_array\"
         minOccurs=\"0\" maxOccurs=\"1\"/>\n          </xsd:sequence>\n        </xsd:complexType>\n
         \     </xsd:element>\n      <xsd:element name=\"assign_supp_planResponseElement\">\n
         \       <xsd:complexType>\n          <xsd:sequence>\n            <xsd:element
@@ -3904,8 +4608,9 @@ http_interactions:
         minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"alt_proration_start_date\"
         type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
         name=\"effective_date\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
-        \           <xsd:element name=\"alt_caller_id\" type=\"xsd:string\" minOccurs=\"0\"
-        maxOccurs=\"1\"/>\n            <xsd:element name=\"optional_transaction_qualifiers\"
+        \           <xsd:element name=\"offset_interval\" type=\"xsd:long\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"alt_caller_id\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"optional_transaction_qualifiers\"
         type=\"tns:optional_transaction_qualifiers_array\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
         \         </xsd:sequence>\n        </xsd:complexType>\n      </xsd:element>\n
         \     <xsd:element name=\"cancel_supp_planResponseElement\">\n        <xsd:complexType>\n
@@ -3936,9 +4641,10 @@ http_interactions:
         type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
         name=\"new_acct_custom_rates\" type=\"tns:new_acct_custom_rates_array\" minOccurs=\"0\"
         maxOccurs=\"1\"/>\n            <xsd:element name=\"effective_date\" type=\"xsd:string\"
-        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"alt_caller_id\"
-        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
-        name=\"optional_transaction_qualifiers\" type=\"tns:optional_transaction_qualifiers_array\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"offset_interval\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"alt_caller_id\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"optional_transaction_qualifiers\" type=\"tns:optional_transaction_qualifiers_array\"
         minOccurs=\"0\" maxOccurs=\"1\"/>\n          </xsd:sequence>\n        </xsd:complexType>\n
         \     </xsd:element>\n      <xsd:element name=\"modify_supp_planResponseElement\">\n
         \       <xsd:complexType>\n          <xsd:sequence>\n            <xsd:element
@@ -3990,27 +4696,29 @@ http_interactions:
         minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"new_acct_custom_rates\"
         type=\"tns:new_acct_custom_rates_array\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
         \           <xsd:element name=\"effective_date\" type=\"xsd:string\" minOccurs=\"0\"
-        maxOccurs=\"1\"/>\n            <xsd:element name=\"alt_caller_id\" type=\"xsd:string\"
-        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"optional_transaction_qualifiers\"
-        type=\"tns:optional_transaction_qualifiers_array\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
-        \         </xsd:sequence>\n        </xsd:complexType>\n      </xsd:element>\n
-        \     <xsd:element name=\"replace_supp_planResponseElement\">\n        <xsd:complexType>\n
-        \         <xsd:sequence>\n            <xsd:element name=\"error_code\" type=\"xsd:long\"
-        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"error_msg\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"offset_interval\" type=\"xsd:long\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"alt_caller_id\"
         type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
-        name=\"proration_result_amount\" type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
-        \           <xsd:element name=\"invoice_no\" type=\"xsd:long\" minOccurs=\"0\"
-        maxOccurs=\"1\"/>\n            <xsd:element name=\"supp_plan_line_items\"
-        type=\"tns:supp_plan_line_items_ReturnElement\" minOccurs=\"0\" maxOccurs=\"unbounded\"/>\n
-        \           <xsd:element name=\"total_charges_before_tax\" type=\"xsd:double\"
-        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"total_tax_charges\"
+        name=\"optional_transaction_qualifiers\" type=\"tns:optional_transaction_qualifiers_array\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n          </xsd:sequence>\n        </xsd:complexType>\n
+        \     </xsd:element>\n      <xsd:element name=\"replace_supp_planResponseElement\">\n
+        \       <xsd:complexType>\n          <xsd:sequence>\n            <xsd:element
+        name=\"error_code\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"error_msg\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"proration_result_amount\"
         type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
-        name=\"total_charges_after_tax\" type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
-        \           <xsd:element name=\"total_credit\" type=\"xsd:double\" minOccurs=\"0\"
-        maxOccurs=\"1\"/>\n            <xsd:element name=\"total_tax_credit\" type=\"xsd:double\"
-        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"total_credit_before_tax\"
+        name=\"invoice_no\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"supp_plan_line_items\" type=\"tns:supp_plan_line_items_ReturnElement\"
+        minOccurs=\"0\" maxOccurs=\"unbounded\"/>\n            <xsd:element name=\"total_charges_before_tax\"
         type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
-        name=\"total\" type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"total_tax_charges\" type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"total_charges_after_tax\" type=\"xsd:double\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"total_credit\"
+        type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"total_tax_credit\" type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"total_credit_before_tax\" type=\"xsd:double\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"total\"
+        type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
         name=\"proration_credit_result_amount\" type=\"xsd:double\" minOccurs=\"0\"
         maxOccurs=\"1\"/>\n            <xsd:element name=\"proration_credit_amount\"
         type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
@@ -4278,19 +4986,21 @@ http_interactions:
         type=\"tns:client_coll_acct_group_ids_array\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
         \           <xsd:element name=\"track_data1\" type=\"xsd:string\" minOccurs=\"0\"
         maxOccurs=\"1\"/>\n            <xsd:element name=\"track_data2\" type=\"xsd:string\"
-        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"alt_caller_id\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"do_write\"
         type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
-        name=\"optional_transaction_qualifiers\" type=\"tns:optional_transaction_qualifiers_array\"
-        minOccurs=\"0\" maxOccurs=\"1\"/>\n          </xsd:sequence>\n        </xsd:complexType>\n
-        \     </xsd:element>\n      <xsd:element name=\"create_acct_completeResponseElement\">\n
-        \       <xsd:complexType>\n          <xsd:sequence>\n            <xsd:element
-        name=\"error_code\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
-        \           <xsd:element name=\"error_msg\" type=\"xsd:string\" minOccurs=\"0\"
-        maxOccurs=\"1\"/>\n            <xsd:element name=\"acct_no\" type=\"xsd:long\"
-        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"out_userid\"
+        name=\"tax_exemption_level\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"alt_caller_id\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"optional_transaction_qualifiers\"
+        type=\"tns:optional_transaction_qualifiers_array\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \         </xsd:sequence>\n        </xsd:complexType>\n      </xsd:element>\n
+        \     <xsd:element name=\"create_acct_completeResponseElement\">\n        <xsd:complexType>\n
+        \         <xsd:sequence>\n            <xsd:element name=\"error_code\" type=\"xsd:long\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"error_msg\"
         type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
-        name=\"invoicing_error_code\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
-        \           <xsd:element name=\"invoicing_error_msg\" type=\"xsd:string\"
+        name=\"acct_no\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"out_userid\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"invoicing_error_code\" type=\"xsd:long\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"invoicing_error_msg\" type=\"xsd:string\"
         minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"invoice_no\"
         type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
         name=\"proc_cvv_response\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
@@ -4304,6 +5014,759 @@ http_interactions:
         minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"proc_merch_comments\"
         type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
         name=\"out_new_acct_plan_contracts\" type=\"tns:out_new_acct_plan_contracts_ReturnElement\"
+        minOccurs=\"0\" maxOccurs=\"unbounded\"/>\n            <xsd:element name=\"invoice_charges_before_tax\"
+        type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"invoice_tax_charges\" type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"invoice_charges_after_tax\" type=\"xsd:double\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"invoice_credit_amount\"
+        type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"invoice_total_amount\" type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"new_acct_invoice_line_items\" type=\"tns:new_acct_invoice_line_items_ReturnElement\"
+        minOccurs=\"0\" maxOccurs=\"unbounded\"/>\n          </xsd:sequence>\n        </xsd:complexType>\n
+        \     </xsd:element>\n      <xsd:element name=\"create_acct_hierarchy\">\n
+        \       <xsd:complexType>\n          <xsd:sequence>\n            <xsd:element
+        name=\"client_no\" type=\"xsd:long\" minOccurs=\"1\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"auth_key\" type=\"xsd:string\" minOccurs=\"1\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"do_write\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"client_receipt_id\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a1_alt_start_date\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a1_client_acct_id\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a1_userid\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a1_status_cd\" type=\"xsd:long\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a1_master_plan_no\"
+        type=\"xsd:long\" minOccurs=\"1\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a1_master_plan_units\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a1_supp_plans\" type=\"tns:a1_supp_plans_array\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a1_supp_plan_units\"
+        type=\"tns:a1_supp_plan_units_array\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a1_notify_method\" type=\"xsd:long\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a1_promo_cd\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a1_password\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a1_secret_question\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a1_secret_question_answer\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a1_first_name\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a1_mi\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a1_last_name\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a1_company_name\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a1_address1\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a1_address2\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a1_city\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a1_locality\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a1_state_prov\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a1_country\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a1_postal_cd\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a1_phone\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a1_phone_ext\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a1_cell_phone\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a1_work_phone\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a1_work_phone_ext\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a1_email\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a1_birthdate\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a1_bill_first_name\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a1_bill_mi\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a1_bill_last_name\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a1_bill_company_name\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a1_bill_address1\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a1_bill_address2\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a1_bill_city\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a1_bill_locality\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a1_bill_state_prov\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a1_bill_country\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a1_bill_postal_cd\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a1_bill_phone\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a1_bill_phone_ext\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a1_bill_cell_phone\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a1_bill_work_phone\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a1_bill_work_phone_ext\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a1_bill_email\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a1_pay_method\" type=\"xsd:long\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a1_cc_number\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a1_cc_expire_mm\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a1_cc_expire_yyyy\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a1_bank_acct_no\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a1_bank_routing_no\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a1_resp_level_cd\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a1_functional_acct_groups\" type=\"tns:a1_functional_acct_groups_array\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a1_collections_acct_groups\"
+        type=\"tns:a1_collections_acct_groups_array\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a1_supp_field_names\" type=\"tns:a1_supp_field_names_array\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a1_supp_field_values\"
+        type=\"tns:a1_supp_field_values_array\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a1_test_acct_ind\" type=\"xsd:long\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a1_status_until_alt_start\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a1_balance_forward\" type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a1_alt_bill_day\" type=\"xsd:long\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a1_do_full_invoicing\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a1_do_prorated_invoicing\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a1_master_plan_alt_rate_sched_no\" type=\"xsd:long\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a1_supp_plan_alt_rate_sched_no\"
+        type=\"tns:a1_supp_plan_alt_rate_sched_no_array\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a1_currency_cd\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a1_cvv\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a1_taxpayer_id\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a1_bill_agreement_id\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a1_retroactive_start_date\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a1_coupon_codes\"
+        type=\"tns:a1_coupon_codes_array\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a1_new_acct_custom_rates\" type=\"tns:a1_new_acct_custom_rates_array\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a1_alt_msg_template_no\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a1_seq_func_group_no\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a1_new_acct_plan_contracts\" type=\"tns:a1_new_acct_plan_contracts_array\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a1_bank_acct_type\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a1_bill_drivers_license_no\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a1_bill_drivers_license_state\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a1_bill_taxpayer_id\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a1_address3\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a1_bill_address3\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a1_usage_accumulation_config\"
+        type=\"tns:a1_usage_accumulation_config_array\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a1_enable_usage_pooling_plan_no\" type=\"tns:a1_enable_usage_pooling_plan_no_array\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a1_client_func_acct_group_ids\"
+        type=\"tns:a1_client_func_acct_group_ids_array\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a1_client_coll_acct_group_ids\" type=\"tns:a1_client_coll_acct_group_ids_array\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a1_track_data1\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a1_track_data2\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a2_alt_start_date\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a2_client_acct_id\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a2_userid\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a2_status_cd\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a2_master_plan_no\" type=\"xsd:long\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a2_master_plan_units\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a2_supp_plans\" type=\"tns:a2_supp_plans_array\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a2_supp_plan_units\" type=\"tns:a2_supp_plan_units_array\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a2_notify_method\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a2_promo_cd\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a2_password\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a2_secret_question\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a2_secret_question_answer\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a2_first_name\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a2_mi\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a2_last_name\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a2_company_name\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a2_address1\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a2_address2\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a2_city\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a2_locality\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a2_state_prov\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a2_country\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a2_postal_cd\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a2_phone\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a2_phone_ext\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a2_cell_phone\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a2_work_phone\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a2_work_phone_ext\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a2_email\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a2_birthdate\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a2_bill_first_name\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a2_bill_mi\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a2_bill_last_name\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a2_bill_company_name\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a2_bill_address1\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a2_bill_address2\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a2_bill_city\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a2_bill_locality\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a2_bill_state_prov\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a2_bill_country\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a2_bill_postal_cd\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a2_bill_phone\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a2_bill_phone_ext\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a2_bill_cell_phone\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a2_bill_work_phone\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a2_bill_work_phone_ext\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a2_bill_email\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a2_pay_method\" type=\"xsd:long\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a2_cc_number\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a2_cc_expire_mm\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a2_cc_expire_yyyy\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a2_bank_acct_no\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a2_bank_routing_no\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a2_resp_level_cd\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a2_functional_acct_groups\" type=\"tns:a2_functional_acct_groups_array\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a2_collections_acct_groups\"
+        type=\"tns:a2_collections_acct_groups_array\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a2_supp_field_names\" type=\"tns:a2_supp_field_names_array\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a2_supp_field_values\"
+        type=\"tns:a2_supp_field_values_array\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a2_test_acct_ind\" type=\"xsd:long\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a2_status_until_alt_start\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a2_balance_forward\" type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a2_alt_bill_day\" type=\"xsd:long\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a2_do_full_invoicing\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a2_do_prorated_invoicing\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a2_master_plan_alt_rate_sched_no\" type=\"xsd:long\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a2_supp_plan_alt_rate_sched_no\"
+        type=\"tns:a2_supp_plan_alt_rate_sched_no_array\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a2_currency_cd\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a2_cvv\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a2_taxpayer_id\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a2_bill_agreement_id\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a2_retroactive_start_date\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a2_coupon_codes\"
+        type=\"tns:a2_coupon_codes_array\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a2_new_acct_custom_rates\" type=\"tns:a2_new_acct_custom_rates_array\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a2_alt_msg_template_no\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a2_seq_func_group_no\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a2_new_acct_plan_contracts\" type=\"tns:a2_new_acct_plan_contracts_array\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a2_bank_acct_type\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a2_bill_drivers_license_no\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a2_bill_drivers_license_state\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a2_bill_taxpayer_id\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a2_address3\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a2_bill_address3\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a2_usage_accumulation_config\"
+        type=\"tns:a2_usage_accumulation_config_array\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a2_enable_usage_pooling_plan_no\" type=\"tns:a2_enable_usage_pooling_plan_no_array\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a2_client_func_acct_group_ids\"
+        type=\"tns:a2_client_func_acct_group_ids_array\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a2_client_coll_acct_group_ids\" type=\"tns:a2_client_coll_acct_group_ids_array\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a2_track_data1\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a2_track_data2\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a3_alt_start_date\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a3_client_acct_id\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a3_userid\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a3_status_cd\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a3_master_plan_no\" type=\"xsd:long\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a3_master_plan_units\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a3_supp_plans\" type=\"tns:a3_supp_plans_array\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a3_supp_plan_units\" type=\"tns:a3_supp_plan_units_array\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a3_notify_method\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a3_promo_cd\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a3_password\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a3_secret_question\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a3_secret_question_answer\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a3_first_name\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a3_mi\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a3_last_name\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a3_company_name\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a3_address1\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a3_address2\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a3_city\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a3_locality\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a3_state_prov\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a3_country\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a3_postal_cd\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a3_phone\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a3_phone_ext\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a3_cell_phone\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a3_work_phone\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a3_work_phone_ext\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a3_email\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a3_birthdate\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a3_bill_first_name\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a3_bill_mi\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a3_bill_last_name\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a3_bill_company_name\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a3_bill_address1\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a3_bill_address2\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a3_bill_city\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a3_bill_locality\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a3_bill_state_prov\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a3_bill_country\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a3_bill_postal_cd\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a3_bill_phone\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a3_bill_phone_ext\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a3_bill_cell_phone\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a3_bill_work_phone\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a3_bill_work_phone_ext\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a3_bill_email\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a3_pay_method\" type=\"xsd:long\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a3_cc_number\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a3_cc_expire_mm\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a3_cc_expire_yyyy\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a3_bank_acct_no\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a3_bank_routing_no\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a3_resp_level_cd\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a3_functional_acct_groups\" type=\"tns:a3_functional_acct_groups_array\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a3_collections_acct_groups\"
+        type=\"tns:a3_collections_acct_groups_array\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a3_supp_field_names\" type=\"tns:a3_supp_field_names_array\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a3_supp_field_values\"
+        type=\"tns:a3_supp_field_values_array\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a3_test_acct_ind\" type=\"xsd:long\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a3_status_until_alt_start\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a3_balance_forward\" type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a3_alt_bill_day\" type=\"xsd:long\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a3_do_full_invoicing\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a3_do_prorated_invoicing\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a3_master_plan_alt_rate_sched_no\" type=\"xsd:long\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a3_supp_plan_alt_rate_sched_no\"
+        type=\"tns:a3_supp_plan_alt_rate_sched_no_array\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a3_currency_cd\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a3_cvv\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a3_taxpayer_id\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a3_bill_agreement_id\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a3_retroactive_start_date\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a3_coupon_codes\"
+        type=\"tns:a3_coupon_codes_array\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a3_new_acct_custom_rates\" type=\"tns:a3_new_acct_custom_rates_array\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a3_alt_msg_template_no\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a3_seq_func_group_no\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a3_new_acct_plan_contracts\" type=\"tns:a3_new_acct_plan_contracts_array\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a3_bank_acct_type\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a3_bill_drivers_license_no\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a3_bill_drivers_license_state\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a3_bill_taxpayer_id\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a3_address3\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a3_bill_address3\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a3_usage_accumulation_config\"
+        type=\"tns:a3_usage_accumulation_config_array\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a3_enable_usage_pooling_plan_no\" type=\"tns:a3_enable_usage_pooling_plan_no_array\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a3_client_func_acct_group_ids\"
+        type=\"tns:a3_client_func_acct_group_ids_array\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a3_client_coll_acct_group_ids\" type=\"tns:a3_client_coll_acct_group_ids_array\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a3_track_data1\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a3_track_data2\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a4_alt_start_date\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a4_client_acct_id\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a4_userid\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a4_status_cd\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a4_master_plan_no\" type=\"xsd:long\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a4_master_plan_units\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a4_supp_plans\" type=\"tns:a4_supp_plans_array\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a4_supp_plan_units\" type=\"tns:a4_supp_plan_units_array\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a4_notify_method\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a4_promo_cd\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a4_password\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a4_secret_question\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a4_secret_question_answer\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a4_first_name\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a4_mi\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a4_last_name\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a4_company_name\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a4_address1\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a4_address2\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a4_city\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a4_locality\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a4_state_prov\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a4_country\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a4_postal_cd\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a4_phone\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a4_phone_ext\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a4_cell_phone\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a4_work_phone\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a4_work_phone_ext\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a4_email\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a4_birthdate\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a4_bill_first_name\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a4_bill_mi\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a4_bill_last_name\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a4_bill_company_name\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a4_bill_address1\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a4_bill_address2\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a4_bill_city\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a4_bill_locality\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a4_bill_state_prov\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a4_bill_country\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a4_bill_postal_cd\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a4_bill_phone\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a4_bill_phone_ext\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a4_bill_cell_phone\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a4_bill_work_phone\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a4_bill_work_phone_ext\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a4_bill_email\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a4_pay_method\" type=\"xsd:long\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a4_cc_number\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a4_cc_expire_mm\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a4_cc_expire_yyyy\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a4_bank_acct_no\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a4_bank_routing_no\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a4_resp_level_cd\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a4_functional_acct_groups\" type=\"tns:a4_functional_acct_groups_array\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a4_collections_acct_groups\"
+        type=\"tns:a4_collections_acct_groups_array\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a4_supp_field_names\" type=\"tns:a4_supp_field_names_array\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a4_supp_field_values\"
+        type=\"tns:a4_supp_field_values_array\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a4_test_acct_ind\" type=\"xsd:long\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a4_status_until_alt_start\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a4_balance_forward\" type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a4_alt_bill_day\" type=\"xsd:long\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a4_do_full_invoicing\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a4_do_prorated_invoicing\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a4_master_plan_alt_rate_sched_no\" type=\"xsd:long\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a4_supp_plan_alt_rate_sched_no\"
+        type=\"tns:a4_supp_plan_alt_rate_sched_no_array\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a4_currency_cd\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a4_cvv\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a4_taxpayer_id\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a4_bill_agreement_id\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a4_retroactive_start_date\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a4_coupon_codes\"
+        type=\"tns:a4_coupon_codes_array\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a4_new_acct_custom_rates\" type=\"tns:a4_new_acct_custom_rates_array\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a4_alt_msg_template_no\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a4_seq_func_group_no\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a4_new_acct_plan_contracts\" type=\"tns:a4_new_acct_plan_contracts_array\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a4_bank_acct_type\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a4_bill_drivers_license_no\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a4_bill_drivers_license_state\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a4_bill_taxpayer_id\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a4_address3\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a4_bill_address3\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a4_usage_accumulation_config\"
+        type=\"tns:a4_usage_accumulation_config_array\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a4_enable_usage_pooling_plan_no\" type=\"tns:a4_enable_usage_pooling_plan_no_array\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a4_client_func_acct_group_ids\"
+        type=\"tns:a4_client_func_acct_group_ids_array\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a4_client_coll_acct_group_ids\" type=\"tns:a4_client_coll_acct_group_ids_array\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a4_track_data1\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a4_track_data2\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a5_alt_start_date\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a5_client_acct_id\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a5_userid\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a5_status_cd\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a5_master_plan_no\" type=\"xsd:long\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a5_master_plan_units\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a5_supp_plans\" type=\"tns:a5_supp_plans_array\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a5_supp_plan_units\" type=\"tns:a5_supp_plan_units_array\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a5_notify_method\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a5_promo_cd\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a5_password\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a5_secret_question\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a5_secret_question_answer\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a5_first_name\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a5_mi\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a5_last_name\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a5_company_name\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a5_address1\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a5_address2\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a5_city\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a5_locality\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a5_state_prov\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a5_country\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a5_postal_cd\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a5_phone\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a5_phone_ext\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a5_cell_phone\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a5_work_phone\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a5_work_phone_ext\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a5_email\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a5_birthdate\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a5_bill_first_name\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a5_bill_mi\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a5_bill_last_name\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a5_bill_company_name\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a5_bill_address1\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a5_bill_address2\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a5_bill_city\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a5_bill_locality\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a5_bill_state_prov\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a5_bill_country\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a5_bill_postal_cd\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a5_bill_phone\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a5_bill_phone_ext\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a5_bill_cell_phone\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a5_bill_work_phone\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a5_bill_work_phone_ext\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a5_bill_email\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a5_pay_method\" type=\"xsd:long\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a5_cc_number\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a5_cc_expire_mm\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a5_cc_expire_yyyy\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a5_bank_acct_no\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a5_bank_routing_no\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a5_resp_level_cd\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a5_functional_acct_groups\" type=\"tns:a5_functional_acct_groups_array\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a5_collections_acct_groups\"
+        type=\"tns:a5_collections_acct_groups_array\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a5_supp_field_names\" type=\"tns:a5_supp_field_names_array\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a5_supp_field_values\"
+        type=\"tns:a5_supp_field_values_array\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a5_test_acct_ind\" type=\"xsd:long\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a5_status_until_alt_start\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a5_balance_forward\" type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a5_alt_bill_day\" type=\"xsd:long\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a5_do_full_invoicing\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a5_do_prorated_invoicing\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a5_master_plan_alt_rate_sched_no\" type=\"xsd:long\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a5_supp_plan_alt_rate_sched_no\"
+        type=\"tns:a5_supp_plan_alt_rate_sched_no_array\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a5_currency_cd\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a5_cvv\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a5_taxpayer_id\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a5_bill_agreement_id\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a5_retroactive_start_date\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a5_coupon_codes\"
+        type=\"tns:a5_coupon_codes_array\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a5_new_acct_custom_rates\" type=\"tns:a5_new_acct_custom_rates_array\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a5_alt_msg_template_no\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a5_seq_func_group_no\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a5_new_acct_plan_contracts\" type=\"tns:a5_new_acct_plan_contracts_array\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a5_bank_acct_type\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a5_bill_drivers_license_no\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a5_bill_drivers_license_state\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a5_bill_taxpayer_id\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a5_address3\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a5_bill_address3\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a5_usage_accumulation_config\"
+        type=\"tns:a5_usage_accumulation_config_array\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a5_enable_usage_pooling_plan_no\" type=\"tns:a5_enable_usage_pooling_plan_no_array\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a5_client_func_acct_group_ids\"
+        type=\"tns:a5_client_func_acct_group_ids_array\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a5_client_coll_acct_group_ids\" type=\"tns:a5_client_coll_acct_group_ids_array\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a5_track_data1\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a5_track_data2\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"alt_caller_id\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"optional_transaction_qualifiers\"
+        type=\"tns:optional_transaction_qualifiers_array\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \         </xsd:sequence>\n        </xsd:complexType>\n      </xsd:element>\n
+        \     <xsd:element name=\"create_acct_hierarchyResponseElement\">\n        <xsd:complexType>\n
+        \         <xsd:sequence>\n            <xsd:element name=\"error_code\" type=\"xsd:long\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"error_msg\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a1_error_code\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a1_error_msg\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a1_acct_no\" type=\"xsd:long\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a1_out_userid\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a1_invoicing_error_code\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a1_invoicing_error_msg\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a1_invoice_no\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a1_proc_cvv_response\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a1_proc_avs_response\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a1_proc_cavv_response\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a1_proc_status_code\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a1_proc_status_text\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a1_proc_payment_id\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a1_proc_auth_code\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a1_proc_merch_comments\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a1_out_new_acct_plan_contracts\"
+        type=\"tns:a1_out_new_acct_plan_contracts_ReturnElement\" minOccurs=\"0\"
+        maxOccurs=\"unbounded\"/>\n            <xsd:element name=\"a1_invoice_charges_before_tax\"
+        type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a1_invoice_tax_charges\" type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a1_invoice_charges_after_tax\" type=\"xsd:double\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a1_invoice_credit_amount\"
+        type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a1_invoice_total_amount\" type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a1_new_acct_invoice_line_items\" type=\"tns:a1_new_acct_invoice_line_items_ReturnElement\"
+        minOccurs=\"0\" maxOccurs=\"unbounded\"/>\n            <xsd:element name=\"a2_error_code\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a2_error_msg\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a2_acct_no\" type=\"xsd:long\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a2_out_userid\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a2_invoicing_error_code\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a2_invoicing_error_msg\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a2_invoice_no\" type=\"xsd:long\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a2_proc_cvv_response\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a2_proc_avs_response\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a2_proc_cavv_response\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a2_proc_status_code\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a2_proc_status_text\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a2_proc_payment_id\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a2_proc_auth_code\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a2_proc_merch_comments\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a2_out_new_acct_plan_contracts\" type=\"tns:a2_out_new_acct_plan_contracts_ReturnElement\"
+        minOccurs=\"0\" maxOccurs=\"unbounded\"/>\n            <xsd:element name=\"a2_invoice_charges_before_tax\"
+        type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a2_invoice_tax_charges\" type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a2_invoice_charges_after_tax\" type=\"xsd:double\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a2_invoice_credit_amount\"
+        type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a2_invoice_total_amount\" type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a2_new_acct_invoice_line_items\" type=\"tns:a2_new_acct_invoice_line_items_ReturnElement\"
+        minOccurs=\"0\" maxOccurs=\"unbounded\"/>\n            <xsd:element name=\"a3_error_code\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a3_error_msg\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a3_acct_no\" type=\"xsd:long\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a3_out_userid\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a3_invoicing_error_code\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a3_invoicing_error_msg\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a3_invoice_no\" type=\"xsd:long\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a3_proc_cvv_response\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a3_proc_avs_response\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a3_proc_cavv_response\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a3_proc_status_code\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a3_proc_status_text\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a3_proc_payment_id\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a3_proc_auth_code\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a3_proc_merch_comments\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a3_out_new_acct_plan_contracts\" type=\"tns:a3_out_new_acct_plan_contracts_ReturnElement\"
+        minOccurs=\"0\" maxOccurs=\"unbounded\"/>\n            <xsd:element name=\"a3_invoice_charges_before_tax\"
+        type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a3_invoice_tax_charges\" type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a3_invoice_charges_after_tax\" type=\"xsd:double\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a3_invoice_credit_amount\"
+        type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a3_invoice_total_amount\" type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a3_new_acct_invoice_line_items\" type=\"tns:a3_new_acct_invoice_line_items_ReturnElement\"
+        minOccurs=\"0\" maxOccurs=\"unbounded\"/>\n            <xsd:element name=\"a4_error_code\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a4_error_msg\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a4_acct_no\" type=\"xsd:long\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a4_out_userid\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a4_invoicing_error_code\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a4_invoicing_error_msg\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a4_invoice_no\" type=\"xsd:long\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a4_proc_cvv_response\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a4_proc_avs_response\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a4_proc_cavv_response\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a4_proc_status_code\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a4_proc_status_text\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a4_proc_payment_id\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a4_proc_auth_code\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a4_proc_merch_comments\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a4_out_new_acct_plan_contracts\" type=\"tns:a4_out_new_acct_plan_contracts_ReturnElement\"
+        minOccurs=\"0\" maxOccurs=\"unbounded\"/>\n            <xsd:element name=\"a4_invoice_charges_before_tax\"
+        type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a4_invoice_tax_charges\" type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a4_invoice_charges_after_tax\" type=\"xsd:double\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a4_invoice_credit_amount\"
+        type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a4_invoice_total_amount\" type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a4_new_acct_invoice_line_items\" type=\"tns:a4_new_acct_invoice_line_items_ReturnElement\"
+        minOccurs=\"0\" maxOccurs=\"unbounded\"/>\n            <xsd:element name=\"a5_error_code\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a5_error_msg\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a5_acct_no\" type=\"xsd:long\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a5_out_userid\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a5_invoicing_error_code\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a5_invoicing_error_msg\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a5_invoice_no\" type=\"xsd:long\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a5_proc_cvv_response\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a5_proc_avs_response\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a5_proc_cavv_response\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a5_proc_status_code\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a5_proc_status_text\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a5_proc_payment_id\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"a5_proc_auth_code\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a5_proc_merch_comments\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a5_out_new_acct_plan_contracts\" type=\"tns:a5_out_new_acct_plan_contracts_ReturnElement\"
+        minOccurs=\"0\" maxOccurs=\"unbounded\"/>\n            <xsd:element name=\"a5_invoice_charges_before_tax\"
+        type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a5_invoice_tax_charges\" type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a5_invoice_charges_after_tax\" type=\"xsd:double\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"a5_invoice_credit_amount\"
+        type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"a5_invoice_total_amount\" type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"a5_new_acct_invoice_line_items\" type=\"tns:a5_new_acct_invoice_line_items_ReturnElement\"
         minOccurs=\"0\" maxOccurs=\"unbounded\"/>\n          </xsd:sequence>\n        </xsd:complexType>\n
         \     </xsd:element>\n      <xsd:element name=\"apply_coupon_to_acct\">\n
         \       <xsd:complexType>\n          <xsd:sequence>\n            <xsd:element
@@ -4534,58 +5997,59 @@ http_interactions:
         \           <xsd:element name=\"new_acct_custom_rates\" type=\"tns:new_acct_custom_rates_array\"
         minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"effective_date\"
         type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
-        name=\"alt_caller_id\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
-        \           <xsd:element name=\"optional_transaction_qualifiers\" type=\"tns:optional_transaction_qualifiers_array\"
-        minOccurs=\"0\" maxOccurs=\"1\"/>\n          </xsd:sequence>\n        </xsd:complexType>\n
-        \     </xsd:element>\n      <xsd:element name=\"update_master_planResponseElement\">\n
-        \       <xsd:complexType>\n          <xsd:sequence>\n            <xsd:element
-        name=\"error_code\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
-        \           <xsd:element name=\"error_msg\" type=\"xsd:string\" minOccurs=\"0\"
-        maxOccurs=\"1\"/>\n            <xsd:element name=\"proration_result_amount\"
-        type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
-        name=\"collection_error_code\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
-        \           <xsd:element name=\"collection_error_msg\" type=\"xsd:string\"
-        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"statement_error_code\"
-        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
-        name=\"statement_error_msg\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
-        \           <xsd:element name=\"proc_cvv_response\" type=\"xsd:string\" minOccurs=\"0\"
-        maxOccurs=\"1\"/>\n            <xsd:element name=\"proc_avs_response\" type=\"xsd:string\"
-        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"proc_cavv_response\"
-        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
-        name=\"proc_status_code\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
-        \           <xsd:element name=\"proc_status_text\" type=\"xsd:string\" minOccurs=\"0\"
-        maxOccurs=\"1\"/>\n            <xsd:element name=\"proc_payment_id\" type=\"xsd:string\"
-        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"proc_auth_code\"
-        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
-        name=\"proc_merch_comments\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
-        \           <xsd:element name=\"invoice_no\" type=\"xsd:long\" minOccurs=\"0\"
-        maxOccurs=\"1\"/>\n            <xsd:element name=\"cancelled_supp_plans\"
-        type=\"tns:cancelled_supp_plans_ReturnElement\" minOccurs=\"0\" maxOccurs=\"unbounded\"/>\n
-        \           <xsd:element name=\"expectd_activation_fee\" type=\"xsd:double\"
-        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"expectd_mthly_recurring_cost\"
-        type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
-        name=\"expectd_annu_recurring_cost\" type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        name=\"offset_interval\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"alt_caller_id\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"optional_transaction_qualifiers\"
+        type=\"tns:optional_transaction_qualifiers_array\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
         \         </xsd:sequence>\n        </xsd:complexType>\n      </xsd:element>\n
-        \     <xsd:element name=\"update_acct_complete\">\n        <xsd:complexType>\n
-        \         <xsd:sequence>\n            <xsd:element name=\"client_no\" type=\"xsd:long\"
-        minOccurs=\"1\" maxOccurs=\"1\"/>\n            <xsd:element name=\"auth_key\"
+        \     <xsd:element name=\"update_master_planResponseElement\">\n        <xsd:complexType>\n
+        \         <xsd:sequence>\n            <xsd:element name=\"error_code\" type=\"xsd:long\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"error_msg\"
         type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
-        name=\"acct_no\" type=\"xsd:long\" minOccurs=\"1\" maxOccurs=\"1\"/>\n            <xsd:element
-        name=\"first_name\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
-        \           <xsd:element name=\"last_name\" type=\"xsd:string\" minOccurs=\"0\"
-        maxOccurs=\"1\"/>\n            <xsd:element name=\"middle_initial\" type=\"xsd:string\"
-        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"company_name\"
+        name=\"proration_result_amount\" type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"collection_error_code\" type=\"xsd:long\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"collection_error_msg\"
         type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
-        name=\"address1\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
-        \           <xsd:element name=\"address2\" type=\"xsd:string\" minOccurs=\"0\"
-        maxOccurs=\"1\"/>\n            <xsd:element name=\"city\" type=\"xsd:string\"
-        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"locality\"
+        name=\"statement_error_code\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"statement_error_msg\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"proc_cvv_response\"
         type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
-        name=\"state_prov\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
-        \           <xsd:element name=\"country\" type=\"xsd:string\" minOccurs=\"0\"
-        maxOccurs=\"1\"/>\n            <xsd:element name=\"postal_cd\" type=\"xsd:string\"
-        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"phone\"
+        name=\"proc_avs_response\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"proc_cavv_response\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"proc_status_code\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"proc_status_text\"
         type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"proc_payment_id\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"proc_auth_code\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"proc_merch_comments\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"invoice_no\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"cancelled_supp_plans\" type=\"tns:cancelled_supp_plans_ReturnElement\"
+        minOccurs=\"0\" maxOccurs=\"unbounded\"/>\n            <xsd:element name=\"expectd_activation_fee\"
+        type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"expectd_mthly_recurring_cost\" type=\"xsd:double\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"expectd_annu_recurring_cost\"
+        type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n          </xsd:sequence>\n
+        \       </xsd:complexType>\n      </xsd:element>\n      <xsd:element name=\"update_acct_complete\">\n
+        \       <xsd:complexType>\n          <xsd:sequence>\n            <xsd:element
+        name=\"client_no\" type=\"xsd:long\" minOccurs=\"1\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"auth_key\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"acct_no\" type=\"xsd:long\" minOccurs=\"1\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"first_name\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"last_name\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"middle_initial\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"company_name\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"address1\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"address2\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"city\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"locality\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"state_prov\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"country\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"postal_cd\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"phone\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
         name=\"phone_ext\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
         \           <xsd:element name=\"cell_phone\" type=\"xsd:string\" minOccurs=\"0\"
         maxOccurs=\"1\"/>\n            <xsd:element name=\"work_phone\" type=\"xsd:string\"
@@ -4678,59 +6142,62 @@ http_interactions:
         type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
         name=\"track_data1\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
         \           <xsd:element name=\"track_data2\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"offset_interval\" type=\"xsd:long\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"tax_exemption_level\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"alt_caller_id\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"optional_transaction_qualifiers\" type=\"tns:optional_transaction_qualifiers_array\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n          </xsd:sequence>\n        </xsd:complexType>\n
+        \     </xsd:element>\n      <xsd:element name=\"update_acct_completeResponseElement\">\n
+        \       <xsd:complexType>\n          <xsd:sequence>\n            <xsd:element
+        name=\"error_code\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"error_msg\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"proration_result_amount\"
+        type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"collection_error_code\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"collection_error_msg\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"parent_child_sync_error_code\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"parent_child_sync_error_msg\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"master_plan_error_code\" type=\"xsd:long\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"master_plan_error_msg\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"master_plan_coll_error_code\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"master_plan_coll_error_msg\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"master_plan_stmt_error_code\"
+        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"master_plan_stmt_error_msg\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"proc_cvv_response\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"proc_avs_response\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"proc_cavv_response\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"proc_status_code\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"proc_status_text\" type=\"xsd:string\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"proc_payment_id\" type=\"xsd:string\"
+        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"proc_auth_code\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"proc_merch_comments\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"invoice_no\" type=\"xsd:long\" minOccurs=\"0\"
+        maxOccurs=\"1\"/>\n            <xsd:element name=\"cancelled_supp_plans\"
+        type=\"tns:cancelled_supp_plans_ReturnElement\" minOccurs=\"0\" maxOccurs=\"unbounded\"/>\n
+        \         </xsd:sequence>\n        </xsd:complexType>\n      </xsd:element>\n
+        \     <xsd:element name=\"get_all_acct_receipt_ids\">\n        <xsd:complexType>\n
+        \         <xsd:sequence>\n            <xsd:element name=\"client_no\" type=\"xsd:long\"
+        minOccurs=\"1\" maxOccurs=\"1\"/>\n            <xsd:element name=\"auth_key\"
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"acct_no\" type=\"xsd:long\" minOccurs=\"1\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"start_date_range\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
+        \           <xsd:element name=\"end_date_range\" type=\"xsd:string\" minOccurs=\"0\"
         maxOccurs=\"1\"/>\n            <xsd:element name=\"alt_caller_id\" type=\"xsd:string\"
         minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"optional_transaction_qualifiers\"
         type=\"tns:optional_transaction_qualifiers_array\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
         \         </xsd:sequence>\n        </xsd:complexType>\n      </xsd:element>\n
-        \     <xsd:element name=\"update_acct_completeResponseElement\">\n        <xsd:complexType>\n
+        \     <xsd:element name=\"get_all_acct_receipt_idsResponseElement\">\n        <xsd:complexType>\n
         \         <xsd:sequence>\n            <xsd:element name=\"error_code\" type=\"xsd:long\"
         minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"error_msg\"
         type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
-        name=\"proration_result_amount\" type=\"xsd:double\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
-        \           <xsd:element name=\"collection_error_code\" type=\"xsd:long\"
-        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"collection_error_msg\"
-        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
-        name=\"parent_child_sync_error_code\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
-        \           <xsd:element name=\"parent_child_sync_error_msg\" type=\"xsd:string\"
-        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"master_plan_error_code\"
-        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
-        name=\"master_plan_error_msg\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
-        \           <xsd:element name=\"master_plan_coll_error_code\" type=\"xsd:long\"
-        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"master_plan_coll_error_msg\"
-        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
-        name=\"master_plan_stmt_error_code\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
-        \           <xsd:element name=\"master_plan_stmt_error_msg\" type=\"xsd:string\"
-        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"proc_cvv_response\"
-        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
-        name=\"proc_avs_response\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
-        \           <xsd:element name=\"proc_cavv_response\" type=\"xsd:string\" minOccurs=\"0\"
-        maxOccurs=\"1\"/>\n            <xsd:element name=\"proc_status_code\" type=\"xsd:string\"
-        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"proc_status_text\"
-        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
-        name=\"proc_payment_id\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
-        \           <xsd:element name=\"proc_auth_code\" type=\"xsd:string\" minOccurs=\"0\"
-        maxOccurs=\"1\"/>\n            <xsd:element name=\"proc_merch_comments\" type=\"xsd:string\"
-        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"invoice_no\"
-        type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
-        name=\"cancelled_supp_plans\" type=\"tns:cancelled_supp_plans_ReturnElement\"
-        minOccurs=\"0\" maxOccurs=\"unbounded\"/>\n          </xsd:sequence>\n        </xsd:complexType>\n
-        \     </xsd:element>\n      <xsd:element name=\"get_all_acct_receipt_ids\">\n
-        \       <xsd:complexType>\n          <xsd:sequence>\n            <xsd:element
-        name=\"client_no\" type=\"xsd:long\" minOccurs=\"1\" maxOccurs=\"1\"/>\n            <xsd:element
-        name=\"auth_key\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
-        \           <xsd:element name=\"acct_no\" type=\"xsd:long\" minOccurs=\"1\"
-        maxOccurs=\"1\"/>\n            <xsd:element name=\"start_date_range\" type=\"xsd:string\"
-        minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"end_date_range\"
-        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
-        name=\"alt_caller_id\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
-        \           <xsd:element name=\"optional_transaction_qualifiers\" type=\"tns:optional_transaction_qualifiers_array\"
-        minOccurs=\"0\" maxOccurs=\"1\"/>\n          </xsd:sequence>\n        </xsd:complexType>\n
-        \     </xsd:element>\n      <xsd:element name=\"get_all_acct_receipt_idsResponseElement\">\n
-        \       <xsd:complexType>\n          <xsd:sequence>\n            <xsd:element
-        name=\"error_code\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
-        \           <xsd:element name=\"error_msg\" type=\"xsd:string\" minOccurs=\"0\"
-        maxOccurs=\"1\"/>\n            <xsd:element name=\"acct_receipt\" type=\"tns:acct_receipt_ReturnElement\"
-        minOccurs=\"0\" maxOccurs=\"unbounded\"/>\n          </xsd:sequence>\n        </xsd:complexType>\n
+        name=\"acct_receipt\" type=\"tns:acct_receipt_ReturnElement\" minOccurs=\"0\"
+        maxOccurs=\"unbounded\"/>\n          </xsd:sequence>\n        </xsd:complexType>\n
         \     </xsd:element>\n      <xsd:element name=\"send_arc_threshold_email\">\n
         \       <xsd:complexType>\n          <xsd:sequence>\n            <xsd:element
         name=\"client_no\" type=\"xsd:long\" minOccurs=\"1\" maxOccurs=\"1\"/>\n            <xsd:element
@@ -5062,7 +6529,8 @@ http_interactions:
         \           <xsd:element name=\"client_no\" type=\"xsd:long\" minOccurs=\"1\"
         maxOccurs=\"1\"/>\n            <xsd:element name=\"auth_key\" type=\"xsd:string\"
         minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element name=\"user_id\"
-        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n          </xsd:sequence>\n
+        type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n            <xsd:element
+        name=\"acct_no\" type=\"xsd:long\" minOccurs=\"0\" maxOccurs=\"1\"/>\n          </xsd:sequence>\n
         \       </xsd:complexType>\n      </xsd:element>\n      <xsd:element name=\"set_sessionResponseElement\">\n
         \       <xsd:complexType>\n          <xsd:sequence>\n            <xsd:element
         name=\"session_id\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"1\"/>\n
@@ -6290,10 +7758,17 @@ http_interactions:
         name=\"parameters\" element=\"tns:get_client_plans_all\"/>\n  </message>\n
         \ <message name=\"get_client_plans_allResponseMsg\">\n    <part name=\"parameters\"
         element=\"tns:get_client_plans_allResponseElement\"/>\n  </message>\n  <message
-        name=\"get_inv_no_from_bal_xferRequestMsg\">\n    <part name=\"parameters\"
-        element=\"tns:get_inv_no_from_bal_xfer\"/>\n  </message>\n  <message name=\"get_inv_no_from_bal_xferResponseMsg\">\n
-        \   <part name=\"parameters\" element=\"tns:get_inv_no_from_bal_xferResponseElement\"/>\n
-        \ </message>\n  <message name=\"void_transactionRequestMsg\">\n    <part name=\"parameters\"
+        name=\"get_coupon_detailsRequestMsg\">\n    <part name=\"parameters\" element=\"tns:get_coupon_details\"/>\n
+        \ </message>\n  <message name=\"get_coupon_detailsResponseMsg\">\n    <part
+        name=\"parameters\" element=\"tns:get_coupon_detailsResponseElement\"/>\n
+        \ </message>\n  <message name=\"delete_acct_couponRequestMsg\">\n    <part
+        name=\"parameters\" element=\"tns:delete_acct_coupon\"/>\n  </message>\n  <message
+        name=\"delete_acct_couponResponseMsg\">\n    <part name=\"parameters\" element=\"tns:delete_acct_couponResponseElement\"/>\n
+        \ </message>\n  <message name=\"get_inv_no_from_bal_xferRequestMsg\">\n    <part
+        name=\"parameters\" element=\"tns:get_inv_no_from_bal_xfer\"/>\n  </message>\n
+        \ <message name=\"get_inv_no_from_bal_xferResponseMsg\">\n    <part name=\"parameters\"
+        element=\"tns:get_inv_no_from_bal_xferResponseElement\"/>\n  </message>\n
+        \ <message name=\"void_transactionRequestMsg\">\n    <part name=\"parameters\"
         element=\"tns:void_transaction\"/>\n  </message>\n  <message name=\"void_transactionResponseMsg\">\n
         \   <part name=\"parameters\" element=\"tns:void_transactionResponseElement\"/>\n
         \ </message>\n  <message name=\"reinstate_transactionRequestMsg\">\n    <part
@@ -6637,38 +8112,41 @@ http_interactions:
         name=\"create_acct_completeRequestMsg\">\n    <part name=\"parameters\" element=\"tns:create_acct_complete\"/>\n
         \ </message>\n  <message name=\"create_acct_completeResponseMsg\">\n    <part
         name=\"parameters\" element=\"tns:create_acct_completeResponseElement\"/>\n
-        \ </message>\n  <message name=\"apply_coupon_to_acctRequestMsg\">\n    <part
-        name=\"parameters\" element=\"tns:apply_coupon_to_acct\"/>\n  </message>\n
-        \ <message name=\"apply_coupon_to_acctResponseMsg\">\n    <part name=\"parameters\"
-        element=\"tns:apply_coupon_to_acctResponseElement\"/>\n  </message>\n  <message
-        name=\"create_advanced_service_creditRequestMsg\">\n    <part name=\"parameters\"
-        element=\"tns:create_advanced_service_credit\"/>\n  </message>\n  <message
-        name=\"create_advanced_service_creditResponseMsg\">\n    <part name=\"parameters\"
-        element=\"tns:create_advanced_service_creditResponseElement\"/>\n  </message>\n
-        \ <message name=\"get_acct_no_from_user_idRequestMsg\">\n    <part name=\"parameters\"
-        element=\"tns:get_acct_no_from_user_id\"/>\n  </message>\n  <message name=\"get_acct_no_from_user_idResponseMsg\">\n
-        \   <part name=\"parameters\" element=\"tns:get_acct_no_from_user_idResponseElement\"/>\n
-        \ </message>\n  <message name=\"get_user_id_from_acct_noRequestMsg\">\n    <part
-        name=\"parameters\" element=\"tns:get_user_id_from_acct_no\"/>\n  </message>\n
-        \ <message name=\"get_user_id_from_acct_noResponseMsg\">\n    <part name=\"parameters\"
-        element=\"tns:get_user_id_from_acct_noResponseElement\"/>\n  </message>\n
-        \ <message name=\"get_acct_plan_contractRequestMsg\">\n    <part name=\"parameters\"
-        element=\"tns:get_acct_plan_contract\"/>\n  </message>\n  <message name=\"get_acct_plan_contractResponseMsg\">\n
-        \   <part name=\"parameters\" element=\"tns:get_acct_plan_contractResponseElement\"/>\n
-        \ </message>\n  <message name=\"create_acct_plan_contractRequestMsg\">\n    <part
-        name=\"parameters\" element=\"tns:create_acct_plan_contract\"/>\n  </message>\n
-        \ <message name=\"create_acct_plan_contractResponseMsg\">\n    <part name=\"parameters\"
-        element=\"tns:create_acct_plan_contractResponseElement\"/>\n  </message>\n
-        \ <message name=\"modify_acct_plan_contractRequestMsg\">\n    <part name=\"parameters\"
-        element=\"tns:modify_acct_plan_contract\"/>\n  </message>\n  <message name=\"modify_acct_plan_contractResponseMsg\">\n
-        \   <part name=\"parameters\" element=\"tns:modify_acct_plan_contractResponseElement\"/>\n
-        \ </message>\n  <message name=\"cancel_acct_plan_contractRequestMsg\">\n    <part
-        name=\"parameters\" element=\"tns:cancel_acct_plan_contract\"/>\n  </message>\n
-        \ <message name=\"cancel_acct_plan_contractResponseMsg\">\n    <part name=\"parameters\"
-        element=\"tns:cancel_acct_plan_contractResponseElement\"/>\n  </message>\n
-        \ <message name=\"get_usage_historyRequestMsg\">\n    <part name=\"parameters\"
-        element=\"tns:get_usage_history\"/>\n  </message>\n  <message name=\"get_usage_historyResponseMsg\">\n
-        \   <part name=\"parameters\" element=\"tns:get_usage_historyResponseElement\"/>\n
+        \ </message>\n  <message name=\"create_acct_hierarchyRequestMsg\">\n    <part
+        name=\"parameters\" element=\"tns:create_acct_hierarchy\"/>\n  </message>\n
+        \ <message name=\"create_acct_hierarchyResponseMsg\">\n    <part name=\"parameters\"
+        element=\"tns:create_acct_hierarchyResponseElement\"/>\n  </message>\n  <message
+        name=\"apply_coupon_to_acctRequestMsg\">\n    <part name=\"parameters\" element=\"tns:apply_coupon_to_acct\"/>\n
+        \ </message>\n  <message name=\"apply_coupon_to_acctResponseMsg\">\n    <part
+        name=\"parameters\" element=\"tns:apply_coupon_to_acctResponseElement\"/>\n
+        \ </message>\n  <message name=\"create_advanced_service_creditRequestMsg\">\n
+        \   <part name=\"parameters\" element=\"tns:create_advanced_service_credit\"/>\n
+        \ </message>\n  <message name=\"create_advanced_service_creditResponseMsg\">\n
+        \   <part name=\"parameters\" element=\"tns:create_advanced_service_creditResponseElement\"/>\n
+        \ </message>\n  <message name=\"get_acct_no_from_user_idRequestMsg\">\n    <part
+        name=\"parameters\" element=\"tns:get_acct_no_from_user_id\"/>\n  </message>\n
+        \ <message name=\"get_acct_no_from_user_idResponseMsg\">\n    <part name=\"parameters\"
+        element=\"tns:get_acct_no_from_user_idResponseElement\"/>\n  </message>\n
+        \ <message name=\"get_user_id_from_acct_noRequestMsg\">\n    <part name=\"parameters\"
+        element=\"tns:get_user_id_from_acct_no\"/>\n  </message>\n  <message name=\"get_user_id_from_acct_noResponseMsg\">\n
+        \   <part name=\"parameters\" element=\"tns:get_user_id_from_acct_noResponseElement\"/>\n
+        \ </message>\n  <message name=\"get_acct_plan_contractRequestMsg\">\n    <part
+        name=\"parameters\" element=\"tns:get_acct_plan_contract\"/>\n  </message>\n
+        \ <message name=\"get_acct_plan_contractResponseMsg\">\n    <part name=\"parameters\"
+        element=\"tns:get_acct_plan_contractResponseElement\"/>\n  </message>\n  <message
+        name=\"create_acct_plan_contractRequestMsg\">\n    <part name=\"parameters\"
+        element=\"tns:create_acct_plan_contract\"/>\n  </message>\n  <message name=\"create_acct_plan_contractResponseMsg\">\n
+        \   <part name=\"parameters\" element=\"tns:create_acct_plan_contractResponseElement\"/>\n
+        \ </message>\n  <message name=\"modify_acct_plan_contractRequestMsg\">\n    <part
+        name=\"parameters\" element=\"tns:modify_acct_plan_contract\"/>\n  </message>\n
+        \ <message name=\"modify_acct_plan_contractResponseMsg\">\n    <part name=\"parameters\"
+        element=\"tns:modify_acct_plan_contractResponseElement\"/>\n  </message>\n
+        \ <message name=\"cancel_acct_plan_contractRequestMsg\">\n    <part name=\"parameters\"
+        element=\"tns:cancel_acct_plan_contract\"/>\n  </message>\n  <message name=\"cancel_acct_plan_contractResponseMsg\">\n
+        \   <part name=\"parameters\" element=\"tns:cancel_acct_plan_contractResponseElement\"/>\n
+        \ </message>\n  <message name=\"get_usage_historyRequestMsg\">\n    <part
+        name=\"parameters\" element=\"tns:get_usage_history\"/>\n  </message>\n  <message
+        name=\"get_usage_historyResponseMsg\">\n    <part name=\"parameters\" element=\"tns:get_usage_historyResponseElement\"/>\n
         \ </message>\n  <message name=\"get_acct_messageRequestMsg\">\n    <part name=\"parameters\"
         element=\"tns:get_acct_message\"/>\n  </message>\n  <message name=\"get_acct_messageResponseMsg\">\n
         \   <part name=\"parameters\" element=\"tns:get_acct_messageResponseElement\"/>\n
@@ -7059,6 +8537,10 @@ http_interactions:
         \     <output message=\"tns:save_paypal_bill_agreementResponseMsg\"/>\n    </operation>\n
         \   <operation name=\"get_client_plans_all\">\n      <input message=\"tns:get_client_plans_allRequestMsg\"/>\n
         \     <output message=\"tns:get_client_plans_allResponseMsg\"/>\n    </operation>\n
+        \   <operation name=\"get_coupon_details\">\n      <input message=\"tns:get_coupon_detailsRequestMsg\"/>\n
+        \     <output message=\"tns:get_coupon_detailsResponseMsg\"/>\n    </operation>\n
+        \   <operation name=\"delete_acct_coupon\">\n      <input message=\"tns:delete_acct_couponRequestMsg\"/>\n
+        \     <output message=\"tns:delete_acct_couponResponseMsg\"/>\n    </operation>\n
         \   <operation name=\"get_inv_no_from_bal_xfer\">\n      <input message=\"tns:get_inv_no_from_bal_xferRequestMsg\"/>\n
         \     <output message=\"tns:get_inv_no_from_bal_xferResponseMsg\"/>\n    </operation>\n
         \   <operation name=\"void_transaction\">\n      <input message=\"tns:void_transactionRequestMsg\"/>\n
@@ -7269,6 +8751,8 @@ http_interactions:
         message=\"tns:remove_acct_from_groupRequestMsg\"/>\n      <output message=\"tns:remove_acct_from_groupResponseMsg\"/>\n
         \   </operation>\n    <operation name=\"create_acct_complete\">\n      <input
         message=\"tns:create_acct_completeRequestMsg\"/>\n      <output message=\"tns:create_acct_completeResponseMsg\"/>\n
+        \   </operation>\n    <operation name=\"create_acct_hierarchy\">\n      <input
+        message=\"tns:create_acct_hierarchyRequestMsg\"/>\n      <output message=\"tns:create_acct_hierarchyResponseMsg\"/>\n
         \   </operation>\n    <operation name=\"apply_coupon_to_acct\">\n      <input
         message=\"tns:apply_coupon_to_acctRequestMsg\"/>\n      <output message=\"tns:apply_coupon_to_acctResponseMsg\"/>\n
         \   </operation>\n    <operation name=\"create_advanced_service_credit\">\n
@@ -7526,6 +9010,12 @@ http_interactions:
         \       <soap:body use=\"literal\"/>\n      </input>\n      <output>\n        <soap:body
         use=\"literal\"/>\n      </output>\n    </operation>\n    <operation name=\"get_client_plans_all\">\n
         \     <soap:operation soapAction=\"get_client_plans_all\"/>\n      <input>\n
+        \       <soap:body use=\"literal\"/>\n      </input>\n      <output>\n        <soap:body
+        use=\"literal\"/>\n      </output>\n    </operation>\n    <operation name=\"get_coupon_details\">\n
+        \     <soap:operation soapAction=\"get_coupon_details\"/>\n      <input>\n
+        \       <soap:body use=\"literal\"/>\n      </input>\n      <output>\n        <soap:body
+        use=\"literal\"/>\n      </output>\n    </operation>\n    <operation name=\"delete_acct_coupon\">\n
+        \     <soap:operation soapAction=\"delete_acct_coupon\"/>\n      <input>\n
         \       <soap:body use=\"literal\"/>\n      </input>\n      <output>\n        <soap:body
         use=\"literal\"/>\n      </output>\n    </operation>\n    <operation name=\"get_inv_no_from_bal_xfer\">\n
         \     <soap:operation soapAction=\"get_inv_no_from_bal_xfer\"/>\n      <input>\n
@@ -7832,6 +9322,9 @@ http_interactions:
         \       <soap:body use=\"literal\"/>\n      </input>\n      <output>\n        <soap:body
         use=\"literal\"/>\n      </output>\n    </operation>\n    <operation name=\"create_acct_complete\">\n
         \     <soap:operation soapAction=\"create_acct_complete\"/>\n      <input>\n
+        \       <soap:body use=\"literal\"/>\n      </input>\n      <output>\n        <soap:body
+        use=\"literal\"/>\n      </output>\n    </operation>\n    <operation name=\"create_acct_hierarchy\">\n
+        \     <soap:operation soapAction=\"create_acct_hierarchy\"/>\n      <input>\n
         \       <soap:body use=\"literal\"/>\n      </input>\n      <output>\n        <soap:body
         use=\"literal\"/>\n      </output>\n    </operation>\n    <operation name=\"apply_coupon_to_acct\">\n
         \     <soap:operation soapAction=\"apply_coupon_to_acct\"/>\n      <input>\n
@@ -8191,5 +9684,5 @@ http_interactions:
         location=\"https://secure.future.stage.ariasystems.net/api/ws/api_ws_class_dispatcher.php\"/>\n
         \   </port>\n  </service>\n</definitions>\n\n"
     http_version: 
-  recorded_at: Wed, 22 May 2013 04:15:39 GMT
+  recorded_at: Wed, 22 May 2013 04:00:16 GMT
 recorded_with: VCR 2.4.0

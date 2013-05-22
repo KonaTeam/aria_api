@@ -20,15 +20,15 @@ First you'll need to define your credentials:
 
 In Rails. You could define specific configuration for each environment.
 
-There's also a parameter to define the version of the Aria API you want to use. Default is 6.4
+There's also a parameter to define the version of the Aria API you want to use. Default is 6.8
 
-    AriaApi::Configuration.api_version = "6.5"
+    AriaApi::Configuration.api_version = "6.9"
 
 ## Caching WSDL
 
 In order to avoid downloading all of the SOAP actions from a remote wsdl like https://secure.future.stage.ariasystems.net/api/Advanced/wsdl/6.4/complete-doc_literal_wrapped.wsdl you may optionally define the following option:   
     
-    AriaApi::Configuration.wsdl_path = File.join("path", "to", "fixtures","aria_api_6_4.wsdl")
+    AriaApi::Configuration.wsdl_path = File.join("path", "to", "fixtures","aria_api_6_8.wsdl")
 
 ## Usage
 

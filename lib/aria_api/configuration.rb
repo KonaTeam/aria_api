@@ -24,7 +24,7 @@ module AriaApi
     end
 
     def self.api_version
-      @api_version ||= "6.4"
+      @api_version ||= "6.8"
     end
 
     def self.wsdl_path

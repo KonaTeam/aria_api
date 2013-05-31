@@ -4,6 +4,7 @@ require "savon"
 require "aria_api/exceptions"
 require "aria_api/configuration"
 require 'aria_api/service'
+require 'aria_api/logger'
 
 module AriaApi
   include HTTParty
@@ -12,7 +13,10 @@ module AriaApi
 
   def self.make_request(opts={})
     opts = serialize_opts request_defaults.merge(opts)
-    serialize_response post(AriaApi::Configuration.url, :body => opts)
+    log label: "Aria Request Options", value: opts
+    response = serialize_response(post(AriaApi::Configuration.url, :body => opts))
+    log label: "Aria Response", value: response
+    response
   end
 
   def self.serialize_opts(opts)
@@ -36,6 +40,10 @@ module AriaApi
       self.load_actions_from_wsdl
       self.send(meth, *args)
     end
+  end
+
+  def self.log(opts)
+    AriaApi::Logger.log(opts)
   end
 
   def self.load_actions_from_wsdl

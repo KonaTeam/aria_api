@@ -6,6 +6,7 @@ module AriaApi
       attr_writer *REQUIRED_ATTS
       attr_writer :api_version
       attr_writer :wsdl_path
+      attr_writer :logger
     end
 
     def self.required_attribute(*attributes) # :nodoc:
@@ -29,6 +30,10 @@ module AriaApi
 
     def self.wsdl_path
       @wsdl_path ||= false
+    end
+
+    def self.logger
+      @logger ||= false
     end
   end
 end
